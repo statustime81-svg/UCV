@@ -1,14 +1,10 @@
 import { supabaseSettings } from './supabase';
-import { adminUser } from './cms-auth';
 export class EnquiryError extends Error {
     constructor(message: string, public status: number) { super(message); }
 }
 export async function requireEnquiryAdmin(req: Request) {
     const s = supabaseSettings();
-    if (!s.url || !s.secret) {
-        if (!await adminUser()) throw new EnquiryError('Sign in with the authorised preview owner account.', 401);
-        return false;
-    }
+    if (!s.url || !s.anon || !s.secret) throw new EnquiryError('Supabase is not configured on the server.', 503);
     const authorization = req.headers.get('authorization');
     if (!authorization?.startsWith('Bearer ')) throw new EnquiryError('Please sign in again.', 401);
     const headers = { apikey: s.anon, Authorization: authorization };

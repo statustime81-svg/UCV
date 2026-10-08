@@ -1,6 +1,5 @@
 import { supabaseSettings, supabaseRequest } from '../../../lib/supabase';
-import { env } from 'cloudflare:workers';
-import { db, publicContent } from '../../../lib/cms-db';
+import { publicContent } from '../../../lib/cms-db';
 export async function POST(req: Request) {
     const json = (message: string, status: number) => Response.json({ message }, { status });
     if (!req.headers.get('content-type')?.includes('application/json'))
@@ -30,33 +29,21 @@ export async function POST(req: Request) {
         if (b[k] !== undefined && (typeof b[k] !== 'string' || (b[k] as string).length > 160))
             return json('Invalid fields', 400);
     try {
-        const ip = req.headers.get('cf-connecting-ip') || 'local';
+        const ip = req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || 'unknown';
         const hour = Math.floor(now / 3600000);
         const bytes = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(ip + ':' + hour));
         const bucket = Array.from(new Uint8Array(bytes), b => b.toString(16).padStart(2, '0')).join('');
         const supa = supabaseSettings();
-        const useSupabase = Boolean(supa.url && supa.secret);
-        if (useSupabase) {
-            const response = await supabaseRequest('rpc/consume_enquiry_rate', { p_bucket: bucket, p_expires: new Date(now + 3600000).toISOString() });
-            if (!await response.json())
-                return json('Too many requests', 429);
-        }
-        else {
-            const rate = await db().prepare('INSERT INTO enquiry_rate_limits (bucket,count,expires_at) VALUES (?,1,?) ON CONFLICT(bucket) DO UPDATE SET count=count+1 RETURNING count').bind(bucket, now + 3600000).first<{
-                count: number;
-            }>();
-            if (!rate || rate.count > 5)
-                return json('Too many requests', 429);
-            await db().prepare('DELETE FROM enquiry_rate_limits WHERE expires_at < ?').bind(now).run();
-        }
+        if (!supa.url || !supa.anon || !supa.secret)
+            return json('Enquiry service is not configured.', 503);
+        const rateResponse = await supabaseRequest('rpc/consume_enquiry_rate', { p_bucket: bucket, p_expires: new Date(now + 3600000).toISOString() });
+        if (!await rateResponse.json())
+            return json('Too many requests', 429);
         const content = await publicContent();
         const clean = Object.fromEntries(['name', 'restaurant', 'email', 'phone', 'city', 'brand', 'message', 'lang'].map(k => [k, String(b[k] || '').trim()]));
         const id = crypto.randomUUID();
-        if (useSupabase)
-            await supabaseRequest('partner_enquiries', { id, ...clean, consent: true, created_at: new Date(now).toISOString() });
-        else
-            await db().prepare('INSERT INTO partner_enquiries (id,data,created_at,email_status) VALUES (?,?,?,?)').bind(id, JSON.stringify(clean), now, 'pending').run();
-        const settings = env as unknown as Record<string, string>;
+        await supabaseRequest('partner_enquiries', { id, ...clean, consent: true, created_at: new Date(now).toISOString() });
+        const settings = process.env;
         let emailSent = false;
         let status = 'not_configured';
         if (settings.EMAIL_API_KEY && settings.EMAIL_FROM) {
@@ -69,8 +56,6 @@ export async function POST(req: Request) {
                 status = 'failed';
             }
         }
-        if (!useSupabase)
-            await db().prepare('UPDATE partner_enquiries SET email_status = ? WHERE id = ?').bind(status, id).run();
         return Response.json({ received: true, emailSent });
     }
     catch (e) {
