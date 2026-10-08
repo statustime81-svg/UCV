@@ -1,10 +1,12 @@
-import { readGallery } from '../../../lib/gallery';
-export async function GET() {
-    try {
-        return Response.json({ images: await readGallery() }, { headers: { 'Cache-Control': 'no-store' } });
-    }
-    catch {
-        return Response.json({ error: 'Gallery unavailable' }, { status: 503 });
-    }
-}
+import { galleryImages } from "../../../src/content/gallery";
 
+export async function GET() {
+  return Response.json(
+    { images: galleryImages },
+    {
+      headers: {
+        "Cache-Control": "public, max-age=300, stale-while-revalidate=3600",
+      },
+    },
+  );
+}
