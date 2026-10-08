@@ -18,6 +18,13 @@ export default defineConfig({
     vinext(),
     sites({ mockAuth: false }),
     connectorPreview(),
-    nitro({ preset: "vercel" }),
+nitro({
+  preset: "vercel",
+  rollupConfig: {
+    output: {
+      inlineDynamicImports: true,
+    },
+  },
+}),
   ],
 });
