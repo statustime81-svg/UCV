@@ -1,0 +1,20 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1791005122996,
+      "tag": "0000_shocking_blob",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1791005323202,
+      "tag": "0001_wooden_masked_marvel",
+      "breakpoints": true
+    }
+  ]
+}

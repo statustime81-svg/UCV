@@ -1,0 +1,807 @@
+{
+  "Neue Frage": {
+    "de": "Neue Frage",
+    "en": "New question",
+    "group": "Shared"
+  },
+  "Neue Antwort": {
+    "de": "Neue Antwort",
+    "en": "New answer",
+    "group": "Shared"
+  },
+  "German question": {
+    "de": "German question",
+    "en": "English question",
+    "group": "Shared"
+  },
+  "German answer": {
+    "de": "German answer",
+    "en": "English answer",
+    "group": "Shared"
+  },
+  "id": {
+    "de": "id",
+    "en": "created_at",
+    "group": "Shared"
+  },
+  "restaurant": {
+    "de": "restaurant",
+    "en": "message",
+    "group": "Shared"
+  },
+  "Food-Marken entwickeln.\nRestaurantküchen verbinden.": {
+    "de": "Food-Marken entwickeln.\nRestaurantküchen verbinden.",
+    "en": "Develop food brands.\nConnect restaurant kitchens.",
+    "group": "Shared"
+  },
+  "ENTDECKEN": {
+    "de": "ENTDECKEN",
+    "en": "EXPLORE",
+    "group": "brands"
+  },
+  "KONTAKT": {
+    "de": "KONTAKT",
+    "en": "CONTACT",
+    "group": "Shared"
+  },
+  "Datenschutz": {
+    "de": "Datenschutz",
+    "en": "Privacy Policy",
+    "group": "partner"
+  },
+  "Unsere Marken": {
+    "de": "Unsere Marken",
+    "en": "Our Brands",
+    "group": "Shared"
+  },
+  "So funktioniert’s": {
+    "de": "So funktioniert’s",
+    "en": "How It Works",
+    "group": "Shared"
+  },
+  "Über UCV": {
+    "de": "Über UCV",
+    "en": "About UCV",
+    "group": "Shared"
+  },
+  "Galerie": {
+    "de": "Galerie",
+    "en": "Gallery",
+    "group": "Shared"
+  },
+  "Kontakt": {
+    "de": "Kontakt",
+    "en": "Contact",
+    "group": "impressum"
+  },
+  "Hauptnavigation": {
+    "de": "Hauptnavigation",
+    "en": "Main navigation",
+    "group": "Shared"
+  },
+  "Sprache": {
+    "de": "Sprache",
+    "en": "Language",
+    "group": "Shared"
+  },
+  "Partner werden": {
+    "de": "Partner werden",
+    "en": "Become a Partner",
+    "group": "Shared"
+  },
+  "LASS UNS GEMEINSAM STARTEN.": {
+    "de": "LASS UNS GEMEINSAM STARTEN.",
+    "en": "LET’S GET STARTED TOGETHER.",
+    "group": "Shared"
+  },
+  "DEINE KÜCHE.\nNEUES KAPITEL.": {
+    "de": "DEINE KÜCHE.\nNEUES KAPITEL.",
+    "en": "YOUR KITCHEN.\nA NEW CHAPTER.",
+    "group": "Shared"
+  },
+  "Lass uns herausfinden, welche Marke zu deinem Restaurant passt.": {
+    "de": "Lass uns herausfinden, welche Marke zu deinem Restaurant passt.",
+    "en": "Let’s find out which brand fits your restaurant.",
+    "group": "Shared"
+  },
+  "Direkt sprechen": {
+    "de": "Direkt sprechen",
+    "en": "Let’s talk",
+    "group": "Shared"
+  },
+  "GUTE MARKEN. GUTE KÜCHEN.": {
+    "de": "GUTE MARKEN. GUTE KÜCHEN.",
+    "en": "GOOD BRANDS. GOOD KITCHENS.",
+    "group": "Shared"
+  },
+  "Marke & Menü": {
+    "de": "Marke & Menü",
+    "en": "Brand & menu",
+    "group": "Shared"
+  },
+  "Markenkonzept, Menüstruktur und abgestimmte Preisgestaltung.": {
+    "de": "Markenkonzept, Menüstruktur und abgestimmte Preisgestaltung.",
+    "en": "Brand development, menu structure and agreed pricing guidance.",
+    "group": "Shared"
+  },
+  "Lieferplattformen": {
+    "de": "Lieferplattformen",
+    "en": "Delivery platforms",
+    "group": "Shared"
+  },
+  "Onboarding und laufende Verwaltung deiner Plattform-Auftritte.": {
+    "de": "Onboarding und laufende Verwaltung deiner Plattform-Auftritte.",
+    "en": "Onboarding and ongoing management of your platform listings.",
+    "group": "Shared"
+  },
+  "Team-Training": {
+    "de": "Team-Training",
+    "en": "Team training",
+    "group": "Shared"
+  },
+  "Praktische Vorbereitung für die Zubereitung und den Küchenalltag.": {
+    "de": "Praktische Vorbereitung für die Zubereitung und den Küchenalltag.",
+    "en": "Practical preparation for food production and daily kitchen operations.",
+    "group": "Shared"
+  },
+  "Marketing": {
+    "de": "Marketing",
+    "en": "Marketing",
+    "group": "Shared"
+  },
+  "Unterstützung bei Markenkommunikation und Produktpräsentation.": {
+    "de": "Unterstützung bei Markenkommunikation und Produktpräsentation.",
+    "en": "Support with brand communication and product presentation.",
+    "group": "Shared"
+  },
+  "Verpackung": {
+    "de": "Verpackung",
+    "en": "Packaging",
+    "group": "Shared"
+  },
+  "Orientierung für einen einheitlichen Auftritt bei jeder Bestellung.": {
+    "de": "Orientierung für einen einheitlichen Auftritt bei jeder Bestellung.",
+    "en": "Guidance for a consistent brand experience with every order.",
+    "group": "Shared"
+  },
+  "Persönlicher Support": {
+    "de": "Persönlicher Support",
+    "en": "Personal support",
+    "group": "Shared"
+  },
+  "Laufende Abstimmung und direkter Austausch über WhatsApp.": {
+    "de": "Laufende Abstimmung und direkter Austausch über WhatsApp.",
+    "en": "Ongoing operational guidance and direct support through WhatsApp.",
+    "group": "Shared"
+  },
+  "Restaurant vorstellen": {
+    "de": "Restaurant vorstellen",
+    "en": "Introduce your restaurant",
+    "group": "Shared"
+  },
+  "Erzähl uns von deinem Standort, deiner Küche und deinen Plänen.": {
+    "de": "Erzähl uns von deinem Standort, deiner Küche und deinen Plänen.",
+    "en": "Tell us about your location, kitchen and plans.",
+    "group": "Shared"
+  },
+  "Gemeinsam prüfen": {
+    "de": "Gemeinsam prüfen",
+    "en": "Find the right fit",
+    "group": "Shared"
+  },
+  "Wir besprechen Ausstattung, Kapazität und passende Marken.": {
+    "de": "Wir besprechen Ausstattung, Kapazität und passende Marken.",
+    "en": "We discuss equipment, capacity and suitable brands.",
+    "group": "Shared"
+  },
+  "Start vorbereiten": {
+    "de": "Start vorbereiten",
+    "en": "Prepare to launch",
+    "group": "Shared"
+  },
+  "Konditionen abstimmen, Menü vorbereiten und dein Team trainieren.": {
+    "de": "Konditionen abstimmen, Menü vorbereiten und dein Team trainieren.",
+    "en": "Agree commercial terms, prepare the menu and train your team.",
+    "group": "Shared"
+  },
+  "Gemeinsam loslegen": {
+    "de": "Gemeinsam loslegen",
+    "en": "Launch together",
+    "group": "Shared"
+  },
+  "Dein Team bereitet das Essen zu. UCV begleitet Marke und Liefergeschäft.": {
+    "de": "Dein Team bereitet das Essen zu. UCV begleitet Marke und Liefergeschäft.",
+    "en": "Your team prepares the food. UCV supports the brand and delivery operations.",
+    "group": "Shared"
+  },
+  "Brauche ich ein neues Restaurant?": {
+    "de": "Brauche ich ein neues Restaurant?",
+    "en": "Do I need a new restaurant?",
+    "group": "Shared"
+  },
+  "Nein. Unser Modell richtet sich an bestehende Restaurants mit geeigneten Küchen. Ausstattung und Kapazität prüfen wir gemeinsam.": {
+    "de": "Nein. Unser Modell richtet sich an bestehende Restaurants mit geeigneten Küchen. Ausstattung und Kapazität prüfen wir gemeinsam.",
+    "en": "No. Our model is designed for existing restaurants with suitable kitchens. We assess equipment and capacity together.",
+    "group": "Shared"
+  },
+  "Kann mein bestehendes Angebot bleiben?": {
+    "de": "Kann mein bestehendes Angebot bleiben?",
+    "en": "Can I keep my existing menu?",
+    "group": "Shared"
+  },
+  "Ja. Die UCV-Marke ergänzt dein bestehendes Angebot. Abläufe und Kapazitäten stimmen wir gemeinsam ab.": {
+    "de": "Ja. Die UCV-Marke ergänzt dein bestehendes Angebot. Abläufe und Kapazitäten stimmen wir gemeinsam ab.",
+    "en": "Yes. A UCV brand complements your existing offering. We agree workflows and kitchen capacity together.",
+    "group": "Shared"
+  },
+  "Welche Kosten entstehen?": {
+    "de": "Welche Kosten entstehen?",
+    "en": "What are the costs?",
+    "group": "Shared"
+  },
+  "Investitionen, Umsatzbeteiligung und weitere Konditionen besprechen wir individuell. Es werden keine pauschalen Umsatzversprechen gegeben.": {
+    "de": "Investitionen, Umsatzbeteiligung und weitere Konditionen besprechen wir individuell. Es werden keine pauschalen Umsatzversprechen gegeben.",
+    "en": "Investment, revenue share and other commercial terms are discussed individually. We make no blanket revenue promises.",
+    "group": "Shared"
+  },
+  "Wer bereitet das Essen zu?": {
+    "de": "Wer bereitet das Essen zu?",
+    "en": "Who prepares the food?",
+    "group": "Shared"
+  },
+  "Dein Restaurantteam kocht. UCV unterstützt mit Marken, Menüs, Training, Plattform-Management und Marketing.": {
+    "de": "Dein Restaurantteam kocht. UCV unterstützt mit Marken, Menüs, Training, Plattform-Management und Marketing.",
+    "en": "Your restaurant team cooks. UCV supports brands, menus, training, platform management and marketing.",
+    "group": "Shared"
+  },
+  "Wer übernimmt die Lieferung?": {
+    "de": "Wer übernimmt die Lieferung?",
+    "en": "Who handles delivery?",
+    "group": "Shared"
+  },
+  "Die Lieferabwicklung wird im Rahmen des Onboardings und der ausgewählten Plattformen gemeinsam festgelegt.": {
+    "de": "Die Lieferabwicklung wird im Rahmen des Onboardings und der ausgewählten Plattformen gemeinsam festgelegt.",
+    "en": "Delivery arrangements are agreed during onboarding with the selected platforms.",
+    "group": "Shared"
+  },
+  "Welche Standorte sind möglich?": {
+    "de": "Welche Standorte sind möglich?",
+    "en": "Which locations are suitable?",
+    "group": "Shared"
+  },
+  "UCV ist in Berlin ansässig. Ob dein Standort geeignet ist, prüfen wir im persönlichen Gespräch.": {
+    "de": "UCV ist in Berlin ansässig. Ob dein Standort geeignet ist, prüfen wir im persönlichen Gespräch.",
+    "en": "UCV is based in Berlin. We discuss the suitability of your location in a personal conversation.",
+    "group": "Shared"
+  },
+  "Dummy Konzeptvisualisierung einer Restaurantküche": {
+    "de": "Dummy Konzeptvisualisierung einer Restaurantküche",
+    "en": "Dummy restaurant kitchen concept visual",
+    "group": "about"
+  },
+  "KONZEPTVISUALISIERUNG · KEIN BESTÄTIGTER STANDORT": {
+    "de": "KONZEPTVISUALISIERUNG · KEIN BESTÄTIGTER STANDORT",
+    "en": "CONCEPT VISUAL · NOT A CONFIRMED LOCATION",
+    "group": "about"
+  },
+  "UNSER ANSATZ": {
+    "de": "UNSER ANSATZ",
+    "en": "OUR APPROACH",
+    "group": "about"
+  },
+  "GUTE MARKEN.\nGUTE KÜCHEN.": {
+    "de": "GUTE MARKEN.\nGUTE KÜCHEN.",
+    "en": "GOOD BRANDS.\nGOOD KITCHENS.",
+    "group": "about"
+  },
+  "Urban Culinary Venture ist ein Berliner Food-Marken-Unternehmen. Wir verbinden delivery-orientierte Markenkonzepte mit bestehenden Restaurants und geeigneten Küchen.": {
+    "de": "Urban Culinary Venture ist ein Berliner Food-Marken-Unternehmen. Wir verbinden delivery-orientierte Markenkonzepte mit bestehenden Restaurants und geeigneten Küchen.",
+    "en": "Urban Culinary Venture is a Berlin-based food brand business. We connect delivery-focused brand concepts with existing restaurants and suitable kitchens.",
+    "group": "about"
+  },
+  "Unser Fokus liegt auf einer praktischen Zusammenarbeit: UCV entwickelt und begleitet die Marke, unsere Restaurantpartner bereiten das Essen zu.": {
+    "de": "Unser Fokus liegt auf einer praktischen Zusammenarbeit: UCV entwickelt und begleitet die Marke, unsere Restaurantpartner bereiten das Essen zu.",
+    "en": "Our focus is practical collaboration: UCV develops and supports the brand, while our restaurant partners prepare the food.",
+    "group": "about"
+  },
+  "ÜBER URBAN CULINARY VENTURE": {
+    "de": "ÜBER URBAN CULINARY VENTURE",
+    "en": "ABOUT URBAN CULINARY VENTURE",
+    "group": "about"
+  },
+  "Food-Marken entwickeln.\nKüchen verbinden.": {
+    "de": "Food-Marken entwickeln.\nKüchen verbinden.",
+    "en": "Develop food brands.\nConnect kitchens.",
+    "group": "about"
+  },
+  "In Berlin zu Hause. Gemeinsam mit Restaurantpartnern gedacht.": {
+    "de": "In Berlin zu Hause. Gemeinsam mit Restaurantpartnern gedacht.",
+    "en": "Based in Berlin. Built around restaurant partnerships.",
+    "group": "about"
+  },
+  "Zusammenarbeit": {
+    "de": "Zusammenarbeit",
+    "en": "Collaboration",
+    "group": "about"
+  },
+  "Klare Aufgaben und ein persönlicher Austausch.": {
+    "de": "Klare Aufgaben und ein persönlicher Austausch.",
+    "en": "Clear responsibilities and personal communication.",
+    "group": "about"
+  },
+  "Praxisnähe": {
+    "de": "Praxisnähe",
+    "en": "Practicality",
+    "group": "about"
+  },
+  "Menüs und Abläufe passend zum Küchenalltag.": {
+    "de": "Menüs und Abläufe passend zum Küchenalltag.",
+    "en": "Menus and workflows that fit daily kitchen operations.",
+    "group": "about"
+  },
+  "Markencharakter": {
+    "de": "Markencharakter",
+    "en": "Brand character",
+    "group": "about"
+  },
+  "Eigenständige Konzepte mit einer klaren Identität.": {
+    "de": "Eigenständige Konzepte mit einer klaren Identität.",
+    "en": "Distinct concepts with a clear identity.",
+    "group": "about"
+  },
+  "Marke entdecken": {
+    "de": "Marke entdecken",
+    "en": "Explore brand",
+    "group": "brands"
+  },
+  "Eine Food-Marke für bestehende Restaurantküchen. Dein Team kocht, UCV unterstützt den Markenauftritt und die Abläufe.": {
+    "de": "Eine Food-Marke für bestehende Restaurantküchen. Dein Team kocht, UCV unterstützt den Markenauftritt und die Abläufe.",
+    "en": "A food brand for existing restaurant kitchens. Your team cooks, UCV supports the brand and operations.",
+    "group": "brands"
+  },
+  "DAS KONZEPT": {
+    "de": "DAS KONZEPT",
+    "en": "THE CONCEPT",
+    "group": "fry-rebels"
+  },
+  "Geschmack mit Vielfalt.": {
+    "de": "Geschmack mit Vielfalt.",
+    "en": "Flavour with variety.",
+    "group": "fry-rebels"
+  },
+  "Das konkrete Menü und die Produktzusammenstellung werden gemeinsam abgestimmt.": {
+    "de": "Das konkrete Menü und die Produktzusammenstellung werden gemeinsam abgestimmt.",
+    "en": "The specific menu and product selection are agreed together.",
+    "group": "fry-rebels"
+  },
+  "DIE UCV MARKENWELT": {
+    "de": "DIE UCV MARKENWELT",
+    "en": "THE UCV BRAND FAMILY",
+    "group": "brands"
+  },
+  "Eigener Charakter.\nGemeinsame Küche.": {
+    "de": "Eigener Charakter.\nGemeinsame Küche.",
+    "en": "Distinct character.\nA shared kitchen.",
+    "group": "brands"
+  },
+  "Zwei eigenständige Food-Marken für den Lieferbetrieb. Gemeinsam prüfen wir, welches Konzept zu deinem Restaurant passt.": {
+    "de": "Zwei eigenständige Food-Marken für den Lieferbetrieb. Gemeinsam prüfen wir, welches Konzept zu deinem Restaurant passt.",
+    "en": "Two distinct food brands designed for delivery. Together, we explore which concept fits your restaurant.",
+    "group": "brands"
+  },
+  "Alle": {
+    "de": "Alle",
+    "en": "All",
+    "group": "Shared"
+  },
+  "Food": {
+    "de": "Food",
+    "en": "Food",
+    "group": "Shared"
+  },
+  "Räume": {
+    "de": "Räume",
+    "en": "Spaces",
+    "group": "Shared"
+  },
+  "Menschen": {
+    "de": "Menschen",
+    "en": "People",
+    "group": "Shared"
+  },
+  "DEINE KÜCHE": {
+    "de": "DEINE KÜCHE",
+    "en": "YOUR KITCHEN",
+    "group": "home"
+  },
+  "UNSERE MARKEN": {
+    "de": "UNSERE MARKEN",
+    "en": "OUR BRANDS",
+    "group": "home"
+  },
+  "GEMEINSAM LOSLEGEN": {
+    "de": "GEMEINSAM LOSLEGEN",
+    "en": "LAUNCH TOGETHER",
+    "group": "home"
+  },
+  "DIE MARKEN": {
+    "de": "DIE MARKEN",
+    "en": "THE BRANDS",
+    "group": "home"
+  },
+  "EIGENER CHARAKTER. EIGENER GESCHMACK.": {
+    "de": "EIGENER CHARAKTER. EIGENER GESCHMACK.",
+    "en": "DISTINCT CHARACTER. DISTINCT FLAVOUR.",
+    "group": "home"
+  },
+  "ZWEI MARKEN.\nKEIN EINHEITSBREI.": {
+    "de": "ZWEI MARKEN.\nKEIN EINHEITSBREI.",
+    "en": "TWO BRANDS.\nNO SAME OLD TASTE.",
+    "group": "home"
+  },
+  "Crispy Chicken oder Pizza und Pasta: zwei eigenständige Konzepte für deine bestehende Restaurantküche.": {
+    "de": "Crispy Chicken oder Pizza und Pasta: zwei eigenständige Konzepte für deine bestehende Restaurantküche.",
+    "en": "Crispy chicken or pizza and pasta: two distinct concepts for your existing restaurant kitchen.",
+    "group": "home"
+  },
+  "GUT ZU WISSEN": {
+    "de": "GUT ZU WISSEN",
+    "en": "GOOD TO KNOW",
+    "group": "home"
+  },
+  "Deine Fragen.\nUnsere Antworten.": {
+    "de": "Deine Fragen.\nUnsere Antworten.",
+    "en": "Your questions.\nOur answers.",
+    "group": "home"
+  },
+  "Jede Küche ist anders. Die Details stimmen wir persönlich mit dir ab.": {
+    "de": "Jede Küche ist anders. Die Details stimmen wir persönlich mit dir ab.",
+    "en": "Every kitchen is different. We agree the details with you personally.",
+    "group": "home"
+  },
+  "BESTEHENDE KÜCHEN. NEUE IDEEN.": {
+    "de": "BESTEHENDE KÜCHEN. NEUE IDEEN.",
+    "en": "EXISTING KITCHENS. NEW IDEAS.",
+    "group": "home"
+  },
+  "BRING NEUE FOOD-MARKEN IN DEINE KÜCHE.": {
+    "de": "BRING NEUE FOOD-MARKEN IN DEINE KÜCHE.",
+    "en": "BRING NEW FOOD BRANDS TO YOUR KITCHEN.",
+    "group": "home"
+  },
+  "DEINE KÜCHE.": {
+    "de": "DEINE KÜCHE.",
+    "en": "YOUR KITCHEN.",
+    "group": "home"
+  },
+  "NEUE MARKEN.": {
+    "de": "NEUE MARKEN.",
+    "en": "NEW BRANDS.",
+    "group": "home"
+  },
+  "VIEL GESCHMACK.": {
+    "de": "VIEL GESCHMACK.",
+    "en": "BIG FLAVOUR.",
+    "group": "home"
+  },
+  "Deine Küche hat Möglichkeiten. UCV bringt Food-Marken, Menüs und persönliche Begleitung. Dein Team bringt den Geschmack.": {
+    "de": "Deine Küche hat Möglichkeiten. UCV bringt Food-Marken, Menüs und persönliche Begleitung. Dein Team bringt den Geschmack.",
+    "en": "Your kitchen has possibilities. UCV brings food brands, menus and personal support. Your team brings the flavour.",
+    "group": "home"
+  },
+  "Unsere Marken entdecken": {
+    "de": "Unsere Marken entdecken",
+    "en": "Explore our brands",
+    "group": "home"
+  },
+  "DU KOCHST. WIR BEGLEITEN.": {
+    "de": "DU KOCHST. WIR BEGLEITEN.",
+    "en": "YOU COOK. WE SUPPORT.",
+    "group": "home"
+  },
+  "WEITER ENTDECKEN": {
+    "de": "WEITER ENTDECKEN",
+    "en": "KEEP EXPLORING",
+    "group": "home"
+  },
+  "DIE PARTNERSCHAFT": {
+    "de": "DIE PARTNERSCHAFT",
+    "en": "THE PARTNERSHIP",
+    "group": "home"
+  },
+  "EIN KLARER ABLAUF": {
+    "de": "EIN KLARER ABLAUF",
+    "en": "A CLEAR PROCESS",
+    "group": "home"
+  },
+  "DEINE KÜCHE.\nUNSER GEMEINSAMER START.": {
+    "de": "DEINE KÜCHE.\nUNSER GEMEINSAMER START.",
+    "en": "YOUR KITCHEN.\nOUR SHARED START.",
+    "group": "home"
+  },
+  "Wir ergänzen dein bestehendes Restaurant. Mit klaren Aufgaben, passenden Menüs und Unterstützung im Liefergeschäft.": {
+    "de": "Wir ergänzen dein bestehendes Restaurant. Mit klaren Aufgaben, passenden Menüs und Unterstützung im Liefergeschäft.",
+    "en": "We complement your existing restaurant. With clear responsibilities, suitable menus and delivery support.",
+    "group": "home"
+  },
+  "So funktioniert die Partnerschaft": {
+    "de": "So funktioniert die Partnerschaft",
+    "en": "How the partnership works",
+    "group": "home"
+  },
+  "UNSER SUPPORT": {
+    "de": "UNSER SUPPORT",
+    "en": "OUR SUPPORT",
+    "group": "home"
+  },
+  "WAS WIR MITBRINGEN": {
+    "de": "WAS WIR MITBRINGEN",
+    "en": "WHAT WE BRING",
+    "group": "home"
+  },
+  "DU MACHST DAS ESSEN.\nWIR MACHEN GEMEINSAM WEITER.": {
+    "de": "DU MACHST DAS ESSEN.\nWIR MACHEN GEMEINSAM WEITER.",
+    "en": "YOU MAKE THE FOOD.\nWE MOVE FORWARD TOGETHER.",
+    "group": "home"
+  },
+  "Von der ersten Menüidee bis zur laufenden Abstimmung: Unterstützung für den Alltag deiner Küche.": {
+    "de": "Von der ersten Menüidee bis zur laufenden Abstimmung: Unterstützung für den Alltag deiner Küche.",
+    "en": "From the first menu idea to ongoing conversations: support for your everyday kitchen operations.",
+    "group": "home"
+  },
+  "Food-Marken Konzept": {
+    "de": "Food-Marken Konzept",
+    "en": "Food brand concept",
+    "group": "home"
+  },
+  "Wir entwickeln die Marke.": {
+    "de": "Wir entwickeln die Marke.",
+    "en": "We develop the brand.",
+    "group": "how-it-works"
+  },
+  "Menüs und Preisgestaltung, Plattform-Onboarding, Marketing, Verpackungsberatung, Training und laufende Begleitung.": {
+    "de": "Menüs und Preisgestaltung, Plattform-Onboarding, Marketing, Verpackungsberatung, Training und laufende Begleitung.",
+    "en": "Menus and pricing, platform onboarding, marketing, packaging guidance, training and ongoing support.",
+    "group": "how-it-works"
+  },
+  "DEIN RESTAURANT": {
+    "de": "DEIN RESTAURANT",
+    "en": "YOUR RESTAURANT",
+    "group": "how-it-works"
+  },
+  "Dein Team kocht.": {
+    "de": "Dein Team kocht.",
+    "en": "Your team cooks.",
+    "group": "how-it-works"
+  },
+  "Du bringst deine geeignete Küche, dein Team und Erfahrung im Restaurantalltag ein. Die konkreten Abläufe stimmen wir gemeinsam ab.": {
+    "de": "Du bringst deine geeignete Küche, dein Team und Erfahrung im Restaurantalltag ein. Die konkreten Abläufe stimmen wir gemeinsam ab.",
+    "en": "You bring your suitable kitchen, team and restaurant experience. We agree the specific workflows together.",
+    "group": "how-it-works"
+  },
+  "DAS PARTNERSCHAFTSMODELL": {
+    "de": "DAS PARTNERSCHAFTSMODELL",
+    "en": "THE PARTNERSHIP MODEL",
+    "group": "how-it-works"
+  },
+  "Bestehende Küche.\nNeue Möglichkeiten.": {
+    "de": "Bestehende Küche.\nNeue Möglichkeiten.",
+    "en": "Existing kitchen.\nNew possibilities.",
+    "group": "how-it-works"
+  },
+  "Ein klarer Ablauf vom ersten Gespräch bis zum laufenden Liefergeschäft. Individuell auf deinen Betrieb abgestimmt.": {
+    "de": "Ein klarer Ablauf vom ersten Gespräch bis zum laufenden Liefergeschäft. Individuell auf deinen Betrieb abgestimmt.",
+    "en": "A clear process from the first conversation to ongoing delivery operations. Tailored to your restaurant.",
+    "group": "how-it-works"
+  },
+  "Entwurfsfassung: Die vollständigen Anbieterangaben werden vor dem öffentlichen Launch ergänzt.": {
+    "de": "Entwurfsfassung: Die vollständigen Anbieterangaben werden vor dem öffentlichen Launch ergänzt.",
+    "en": "Draft: complete legal provider information will be added before public launch.",
+    "group": "impressum"
+  },
+  "Berlin, Deutschland": {
+    "de": "Berlin, Deutschland",
+    "en": "Berlin, Germany",
+    "group": "impressum"
+  },
+  "Noch zu ergänzende Anbieterangaben": {
+    "de": "Noch zu ergänzende Anbieterangaben",
+    "en": "Provider information awaiting confirmation",
+    "group": "impressum"
+  },
+  "Vollständiger rechtlicher Unternehmensname, Rechtsform, ladungsfähige Anschrift, vertretungsberechtigte Person und gegebenenfalls Register- und Umsatzsteuerangaben.": {
+    "de": "Vollständiger rechtlicher Unternehmensname, Rechtsform, ladungsfähige Anschrift, vertretungsberechtigte Person und gegebenenfalls Register- und Umsatzsteuerangaben.",
+    "en": "Full legal business name, legal form, complete serviceable address, authorised representative and, where applicable, register and VAT details.",
+    "group": "impressum"
+  },
+  "Vertretungsberechtigte Person": {
+    "de": "Vertretungsberechtigte Person",
+    "en": "Authorised representative",
+    "group": "impressum"
+  },
+  "DIREKT IM AUSTAUSCH": {
+    "de": "DIREKT IM AUSTAUSCH",
+    "en": "LET’S CONNECT",
+    "group": "partner"
+  },
+  "Eine gute Partnerschaft\nbeginnt mit einem Gespräch.": {
+    "de": "Eine gute Partnerschaft\nbeginnt mit einem Gespräch.",
+    "en": "A good partnership\nstarts with a conversation.",
+    "group": "partner"
+  },
+  "Du hast eine geeignete Restaurantküche? Lass uns gemeinsam über die Möglichkeiten sprechen.": {
+    "de": "Du hast eine geeignete Restaurantküche? Lass uns gemeinsam über die Möglichkeiten sprechen.",
+    "en": "Have a suitable restaurant kitchen? Let’s explore the possibilities together.",
+    "group": "partner"
+  },
+  "STANDORT": {
+    "de": "STANDORT",
+    "en": "LOCATION",
+    "group": "partner"
+  },
+  "Dein Restaurant kennenlernen.": {
+    "de": "Dein Restaurant kennenlernen.",
+    "en": "Let’s meet your restaurant.",
+    "group": "partner"
+  },
+  "Erzähl uns ein wenig über deine Küche.": {
+    "de": "Erzähl uns ein wenig über deine Küche.",
+    "en": "Tell us a little about your kitchen.",
+    "group": "partner"
+  },
+  "Interesse an": {
+    "de": "Interesse an",
+    "en": "Interested in",
+    "group": "partner"
+  },
+  "Beide Marken / Beratung": {
+    "de": "Beide Marken / Beratung",
+    "en": "Both brands / advice",
+    "group": "partner"
+  },
+  "Deine Nachricht": {
+    "de": "Deine Nachricht",
+    "en": "Your message",
+    "group": "partner"
+  },
+  "Ich habe die Datenschutzhinweise gelesen. Meine Angaben dürfen zur Bearbeitung meiner Anfrage verwendet werden.": {
+    "de": "Ich habe die Datenschutzhinweise gelesen. Meine Angaben dürfen zur Bearbeitung meiner Anfrage verwendet werden.",
+    "en": "I have read the privacy information. My details may be used to respond to my enquiry.",
+    "group": "partner"
+  },
+  "Wird gesendet…": {
+    "de": "Wird gesendet…",
+    "en": "Sending…",
+    "group": "partner"
+  },
+  "Partneranfrage senden": {
+    "de": "Partneranfrage senden",
+    "en": "Send partnership enquiry",
+    "group": "partner"
+  },
+  "Zu viele Anfragen. Bitte versuche es später oder kontaktiere uns direkt.": {
+    "de": "Zu viele Anfragen. Bitte versuche es später oder kontaktiere uns direkt.",
+    "en": "Too many enquiries. Please try later or contact us directly.",
+    "group": "partner"
+  },
+  "Bitte prüfe deine Angaben und warte kurz, bevor du erneut sendest.": {
+    "de": "Bitte prüfe deine Angaben und warte kurz, bevor du erneut sendest.",
+    "en": "Please check your details and wait briefly before submitting again.",
+    "group": "partner"
+  },
+  "Vielen Dank! Deine Anfrage wurde gespeichert. Unser Team wird sie prüfen.": {
+    "de": "Vielen Dank! Deine Anfrage wurde gespeichert. Unser Team wird sie prüfen.",
+    "en": "Thank you! Your enquiry has been received and saved. Our team will review it.",
+    "group": "partner"
+  },
+  "Vielen Dank! Deine Anfrage wurde erfolgreich gesendet.": {
+    "de": "Vielen Dank! Deine Anfrage wurde erfolgreich gesendet.",
+    "en": "Thank you! Your enquiry was successfully submitted.",
+    "group": "partner"
+  },
+  "Deine Anfrage konnte nicht gesendet werden. Bitte kontaktiere uns per E-Mail oder WhatsApp.": {
+    "de": "Deine Anfrage konnte nicht gesendet werden. Bitte kontaktiere uns per E-Mail oder WhatsApp.",
+    "en": "Your enquiry could not be sent. Please contact us by email or WhatsApp.",
+    "group": "partner"
+  },
+  "Name": {
+    "de": "Name",
+    "en": "Name",
+    "group": "partner"
+  },
+  "Restaurantname": {
+    "de": "Restaurantname",
+    "en": "Restaurant name",
+    "group": "partner"
+  },
+  "E-Mail": {
+    "de": "E-Mail",
+    "en": "Email",
+    "group": "partner"
+  },
+  "Telefon (optional)": {
+    "de": "Telefon (optional)",
+    "en": "Phone (optional)",
+    "group": "partner"
+  },
+  "Stadt / Standort": {
+    "de": "Stadt / Standort",
+    "en": "City / location",
+    "group": "partner"
+  },
+  "PARTNER WERDEN": {
+    "de": "PARTNER WERDEN",
+    "en": "BECOME A PARTNER",
+    "group": "partner"
+  },
+  "Neue Marke.\nDeine Küche.": {
+    "de": "Neue Marke.\nDeine Küche.",
+    "en": "New brand.\nYour kitchen.",
+    "group": "partner"
+  },
+  "Der erste Schritt ist ein unverbindlicher Austausch.": {
+    "de": "Der erste Schritt ist ein unverbindlicher Austausch.",
+    "en": "The first step is a no-obligation conversation.",
+    "group": "partner"
+  },
+  "Datenschutzerklärung": {
+    "de": "Datenschutzerklärung",
+    "en": "Privacy Policy",
+    "group": "privacy"
+  },
+  "Entwurfsfassung: Verantwortlicher, Hosting- und E-Mail-Anbieter sowie Aufbewahrungsfristen müssen vor dem öffentlichen Launch bestätigt werden.": {
+    "de": "Entwurfsfassung: Verantwortlicher, Hosting- und E-Mail-Anbieter sowie Aufbewahrungsfristen müssen vor dem öffentlichen Launch bestätigt werden.",
+    "en": "Draft: the data controller, hosting and email providers, and retention periods must be confirmed before public launch.",
+    "group": "privacy"
+  },
+  "Kontakt für Datenschutzfragen": {
+    "de": "Kontakt für Datenschutzfragen",
+    "en": "Privacy contact",
+    "group": "privacy"
+  },
+  "Partneranfragen": {
+    "de": "Partneranfragen",
+    "en": "Partnership enquiries",
+    "group": "privacy"
+  },
+  "Das Formular erfasst Name, Restaurantname, E-Mail, optional Telefonnummer, Standort, Markeninteresse und Nachricht zur Bearbeitung deiner Anfrage. Die Angaben werden im geschützten Partnerpostfach gespeichert und, sofern eingerichtet, an den konfigurierten E-Mail-Dienst übermittelt. Alternativ kannst du direkt per E-Mail Kontakt aufnehmen.": {
+    "de": "Das Formular erfasst Name, Restaurantname, E-Mail, optional Telefonnummer, Standort, Markeninteresse und Nachricht zur Bearbeitung deiner Anfrage. Die Angaben werden im geschützten Partnerpostfach gespeichert und, sofern eingerichtet, an den konfigurierten E-Mail-Dienst übermittelt. Alternativ kannst du direkt per E-Mail Kontakt aufnehmen.",
+    "en": "The form collects your name, restaurant name, email, optional phone number, location, brand interest and message to handle your enquiry. These details are saved in the protected partnership inbox and, when configured, transmitted to the email service. Alternatively, you may contact us directly by email.",
+    "group": "privacy"
+  },
+  "Technischer Betrieb und Spam-Schutz": {
+    "de": "Technischer Betrieb und Spam-Schutz",
+    "en": "Technical operation and spam protection",
+    "group": "privacy"
+  },
+  "Beim Aufruf können technisch erforderliche Verbindungsdaten durch den Hosting-Anbieter verarbeitet werden. Das Formular verwendet ein verborgenes Kontrollfeld, eine Zeitprüfung und eine gemeinsame Begrenzung der Anfragerate zum Schutz vor Spam. Die IP-Adresse wird hierfür je Stunde gehasht; abgelaufene Rate-Limit-Einträge werden entfernt.": {
+    "de": "Beim Aufruf können technisch erforderliche Verbindungsdaten durch den Hosting-Anbieter verarbeitet werden. Das Formular verwendet ein verborgenes Kontrollfeld, eine Zeitprüfung und eine gemeinsame Begrenzung der Anfragerate zum Schutz vor Spam. Die IP-Adresse wird hierfür je Stunde gehasht; abgelaufene Rate-Limit-Einträge werden entfernt.",
+    "en": "The hosting provider may process connection data necessary to operate the website. The form uses a hidden control field, a timing check and shared request-rate limiting for spam protection. The IP address is hashed per hour for this purpose, and expired rate-limit entries are removed.",
+    "group": "privacy"
+  },
+  "WhatsApp wird erst geöffnet, wenn du den entsprechenden Link auswählst. Dabei gelten die Datenschutzhinweise des Anbieters. Du kannst stattdessen E-Mail verwenden.": {
+    "de": "WhatsApp wird erst geöffnet, wenn du den entsprechenden Link auswählst. Dabei gelten die Datenschutzhinweise des Anbieters. Du kannst stattdessen E-Mail verwenden.",
+    "en": "WhatsApp opens only when you select its link. The provider’s privacy information applies. You may use email instead.",
+    "group": "privacy"
+  },
+  "Cookies und Tracking": {
+    "de": "Cookies und Tracking",
+    "en": "Cookies and tracking",
+    "group": "privacy"
+  },
+  "Diese Website bindet keine Analyse- oder Werbe-Tracker ein. Es werden keine externen Schriftarten geladen. Die Datenschutzhinweise des Hosting-Anbieters sind zusätzlich zu berücksichtigen.": {
+    "de": "Diese Website bindet keine Analyse- oder Werbe-Tracker ein. Es werden keine externen Schriftarten geladen. Die Datenschutzhinweise des Hosting-Anbieters sind zusätzlich zu berücksichtigen.",
+    "en": "This website includes no analytics or advertising trackers and loads no external fonts. The hosting provider’s privacy information must also be considered.",
+    "group": "privacy"
+  },
+  "Deine Rechte": {
+    "de": "Deine Rechte",
+    "en": "Your rights",
+    "group": "privacy"
+  },
+  "Für Auskunft, Berichtigung, Löschung oder weitere Datenschutzanliegen kontaktiere uns über die oben genannte E-Mail-Adresse.": {
+    "de": "Für Auskunft, Berichtigung, Löschung oder weitere Datenschutzanliegen kontaktiere uns über die oben genannte E-Mail-Adresse.",
+    "en": "For access, correction, deletion or other privacy requests, contact us at the email address above.",
+    "group": "privacy"
+  }
+}
