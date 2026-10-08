@@ -16,11 +16,9 @@ export const assets = {
   about01: "/assets/placeholders/about-ucv-01-concept.png",
   about02: "/assets/placeholders/about-ucv-02-concept.png",
   about03: "/assets/placeholders/about-ucv-03-concept.png",
-
-  galleryDetail01:
-    "/assets/placeholders/gallery/ucv-gallery-01-concept.webp",
-  galleryDetail02:
-    "/assets/placeholders/gallery/ucv-gallery-02-concept.webp",
+  
+galleryDetail01: "/assets/placeholders/ucv-gallery-01-concept.webp",
+galleryDetail02: "/assets/placeholders/gallery/ucv-gallery-02-concept.webp",
 
   brandIdea: "/assets/placeholders/brand-idea-concept.png",
   brandComparison: "/assets/placeholders/brand-comparison-concept.png",
