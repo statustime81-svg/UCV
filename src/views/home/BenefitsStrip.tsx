@@ -1,7 +1,62 @@
 "use client";
-import { Lang } from '../../content/site';
-import { useContent } from '../../content/ContentProvider';
-export default function BenefitsStrip({ l }: {
-    l: Lang;
-}) { const { pick } = useContent(); const words = [pick(l, 'DEINE KÜCHE', 'YOUR KITCHEN'), pick(l, 'UNSERE MARKEN', 'OUR BRANDS'), pick(l, 'GEMEINSAM LOSLEGEN', 'LAUNCH TOGETHER')]; return <div className="food-marquee" aria-label={words.join(' · ')}><div className="marquee-track">{[0, 1, 2, 3].map((copy) => <div className="marquee-copy" aria-hidden="true" key={copy}>{words.map((word, i) => <span key={i}>{word}<b>✳</b></span>)}</div>)}</div></div>; }
 
+import type { Lang } from "../../content/site";
+import { useContent } from "../../content/ContentProvider";
+
+export default function BenefitsStrip({ l }: { l: Lang }) {
+  const { pick } = useContent();
+
+  const benefits = [
+    pick(
+      l,
+      "Keine Einstiegsgebühr",
+      "No joining fee"
+    ),
+    pick(
+      l,
+      "Bestehende Küchenkapazitäten nutzen",
+      "Use existing kitchen capacity"
+    ),
+    pick(
+      l,
+      "Unterstützung bei Lieferplattformen und Marketing",
+      "Delivery-platform and marketing support"
+    ),
+    pick(
+      l,
+      "Mitarbeiterschulung und persönliche Betreuung",
+      "Staff training and personal support"
+    ),
+  ];
+
+  return (
+    <div
+      className="food-marquee"
+      role="region"
+      aria-label={pick(
+        l,
+        "Vorteile der Partnerschaft",
+        "Partnership benefits"
+      )}
+    >
+      <ul className="sr-only">
+        {benefits.map((benefit) => (
+          <li key={benefit}>{benefit}</li>
+        ))}
+      </ul>
+
+      <div className="marquee-track" aria-hidden="true">
+        {[0, 1, 2, 3].map((copy) => (
+          <div className="marquee-copy" key={copy}>
+            {benefits.map((benefit) => (
+              <span key={benefit}>
+                {benefit}
+                <b>✳</b>
+              </span>
+            ))}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
