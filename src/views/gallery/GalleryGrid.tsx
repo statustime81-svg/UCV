@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState, type CSSProperties } from "react";
 import {
   Dialog,
   DialogClose,
@@ -9,10 +9,19 @@ import {
   DialogTitle,
 } from "../../../components/ui/dialog";
 import { X } from "lucide-react";
-import { Lang } from "../../content/site";
+import type { Lang } from "../../content/site";
 import { galleryImages } from "../../content/gallery";
 
 type Photo = (typeof galleryImages)[number];
+
+const categories = [
+  ["all", "Alle", "All"],
+  ["food", "Food", "Food"],
+  ["spaces", "Räume", "Spaces"],
+  ["people", "Menschen", "People"],
+] as const;
+
+type GalleryFilter = (typeof categories)[number][0];
 
 export default function GalleryGrid({
   l,
@@ -21,31 +30,50 @@ export default function GalleryGrid({
   l: Lang;
   preview?: boolean;
 }) {
-  const [filter, setFilter] = useState("all");
+  const [filter, setFilter] = useState<GalleryFilter>("all");
   const [selected, setSelected] = useState<Photo | null>(null);
 
-  const items = galleryImages.filter(
-    (image) => filter === "all" || image.category === filter,
+  const opener = useRef<HTMLButtonElement | null>(null);
+
+  // Show a category only when it contains an image.
+  const availableCategories = categories.filter(
+    ([key]) =>
+      key === "all" ||
+      galleryImages.some((photo) => photo.category === key)
   );
+
+  const activeFilter = availableCategories.some(
+    ([key]) => key === filter
+  )
+    ? filter
+    : "all";
+
+  // Homepage preview always uses the first three gallery images.
+  const items = preview
+    ? galleryImages
+    : galleryImages.filter(
+        (photo) =>
+          activeFilter === "all" ||
+          photo.category === activeFilter
+      );
+
   const visibleItems = preview ? items.slice(0, 3) : items;
 
   return (
     <>
-      {!preview && (
+      {!preview && galleryImages.length > 0 && (
         <div
           className="gallery-filters"
-          aria-label={l === "de" ? "Galeriefilter" : "Gallery filters"}
+          role="group"
+          aria-label={
+            l === "de" ? "Galeriefilter" : "Gallery filters"
+          }
         >
-          {[
-            ["all", "Alle", "All"],
-            ["food", "Food", "Food"],
-            ["spaces", "Räume", "Spaces"],
-            ["people", "Menschen", "People"],
-          ].map(([key, de, en]) => (
+          {availableCategories.map(([key, de, en]) => (
             <button
               key={key}
               type="button"
-              aria-pressed={filter === key}
+              aria-pressed={activeFilter === key}
               onClick={() => setFilter(key)}
             >
               {l === "de" ? de : en}
@@ -55,76 +83,131 @@ export default function GalleryGrid({
       )}
 
       <div className="gallery-grid">
-        {visibleItems.map((photo, index) => (
-          <figure
-            key={photo.src}
-            className="gallery-shot"
-            data-reveal
-            style={{ "--delay": `${index * 70}ms` } as React.CSSProperties}
-          >
-            <button
-              type="button"
-              className="gallery-open"
-              onClick={() => setSelected(photo)}
-              aria-label={`${l === "de" ? "Bild vergrößern" : "Enlarge image"}: ${l === "de" ? photo.de : photo.en}`}
+        {visibleItems.map((photo, index) => {
+          const caption = l === "de" ? photo.de : photo.en;
+
+          return (
+            <figure
+              key={photo.src}
+              className="gallery-shot"
+              data-reveal
+              style={
+                {
+                  "--delay": `${Math.min(index, 5) * 70}ms`,
+                } as CSSProperties
+              }
             >
-              <img
-                src={photo.src}
-                alt={l === "de" ? photo.de : photo.en}
-                loading="lazy"
-              />
-              <span className="gallery-zoom" aria-hidden="true">
-                +
-              </span>
-            </button>
-            <figcaption>
-              <span>{String(index + 1).padStart(2, "0")}</span>
-              {l === "de" ? photo.de : photo.en}
-            </figcaption>
-          </figure>
-        ))}
+              <button
+                type="button"
+                className="gallery-open"
+                aria-haspopup="dialog"
+                aria-label={`${
+                  l === "de"
+                    ? "Bild vergrößern"
+                    : "Enlarge image"
+                }: ${caption}`}
+                onClick={(event) => {
+                  opener.current = event.currentTarget;
+                  setSelected(photo);
+                }}
+              >
+                <img
+                  src={photo.src}
+                  alt={caption}
+                  loading="lazy"
+                  decoding="async"
+                />
+
+                <span
+                  className="gallery-zoom"
+                  aria-hidden="true"
+                >
+                  +
+                </span>
+              </button>
+
+              <figcaption>
+                <span>
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                {caption}
+              </figcaption>
+            </figure>
+          );
+        })}
       </div>
 
-      {!visibleItems.length && (
-        <p>
+      {visibleItems.length === 0 && (
+        <p role="status">
           {l === "de"
             ? "Für diese Kategorie sind noch keine Bilder vorhanden."
             : "There are no images in this category yet."}
         </p>
       )}
 
-      {!preview && (
+      {!preview && visibleItems.length > 0 && (
         <p className="gallery-note">
           {l === "de"
-            ? "Vorläufige Food- und Designkonzepte. Keine bestätigten Betriebsstandorte."
-            : "Temporary food and design concepts. No confirmed operating locations."}
+            ? "Als Konzeptbilder gekennzeichnete Darstellungen zeigen gestalterische Ideen. Sie sind keine Fotos bestätigter Betriebsstandorte."
+            : "Images labelled as concepts illustrate design ideas. They are not photographs of confirmed operating locations."}
         </p>
       )}
 
       <Dialog
-        open={Boolean(selected)}
-        onOpenChange={(open) => !open && setSelected(null)}
+        open={selected !== null}
+        onOpenChange={(open) => {
+          if (!open) setSelected(null);
+        }}
       >
         <DialogContent
           className="gallery-lightbox"
           showCloseButton={false}
+          onCloseAutoFocus={(event) => {
+            if (opener.current?.isConnected) {
+              event.preventDefault();
+              opener.current.focus();
+            }
+          }}
         >
           <DialogTitle>
-            {selected && (l === "de" ? selected.de : selected.en)}
+            {selected
+              ? l === "de"
+                ? selected.de
+                : selected.en
+              : l === "de"
+                ? "Galeriebild"
+                : "Gallery image"}
           </DialogTitle>
+
           <DialogDescription className="sr-only">
-            {l === "de" ? "Vergrößerte Galerieansicht" : "Enlarged gallery view"}
+            {l === "de"
+              ? "Vergrößerte Galerieansicht. Mit der Escape-Taste oder der Schließen-Schaltfläche schließen."
+              : "Enlarged gallery view. Close using the Escape key or the close button."}
           </DialogDescription>
+
           <DialogClose
             className="partner-dialog-close"
-            aria-label={l === "de" ? "Bild schließen" : "Close image"}
+            aria-label={
+              l === "de" ? "Bild schließen" : "Close image"
+            }
           >
-            <X size={23} />
+            <X size={23} aria-hidden="true" />
           </DialogClose>
+
           {selected && (
             <img
               src={selected.src}
               alt={l === "de" ? selected.de : selected.en}
+              decoding="async"
+              style={{
+                display: "block",
+                maxWidth: "100%",
+                maxHeight: "75vh",
+                width: "auto",
+                height: "auto",
+                objectFit: "contain",
+                marginInline: "auto",
+              }}
             />
           )}
         </DialogContent>
