@@ -1,6 +1,8 @@
 "use client";
 
-import { Lang, steps } from "../../content/site";
+import type { CSSProperties } from "react";
+import { steps } from "../../content/site";
+import type { Lang } from "../../content/site";
 import { useContent } from "../../content/ContentProvider";
 import {
   MessagesSquare,
@@ -9,7 +11,12 @@ import {
   ChefHat,
 } from "lucide-react";
 
-const icons = [MessagesSquare, UtensilsCrossed, ClipboardCheck, ChefHat];
+const icons = [
+  MessagesSquare,
+  UtensilsCrossed,
+  ClipboardCheck,
+  ChefHat,
+];
 
 const stepImages = [
   "/assets/placeholders/restaurant-vorstellen.png",
@@ -23,30 +30,46 @@ export default function Steps({ l }: { l: Lang }) {
 
   return (
     <div className="steps">
-      {steps.map(([de, en, d, e], i) => {
-        const Icon = icons[i];
+      {steps.map(([titleDe, titleEn, textDe, textEn], index) => {
+        const Icon = icons[index] ?? ClipboardCheck;
+        const image = stepImages[index];
 
         return (
           <article
             tabIndex={0}
-            key={de}
+            key={titleDe}
             data-reveal
-            style={{ "--delay": `${i * 75}ms` } as React.CSSProperties}
+            style={
+              {
+                "--delay": `${index * 75}ms`,
+              } as CSSProperties
+            }
           >
-            <img
-              className="step-image"
-              src={stepImages[i]}
-              alt={pick(l, de, en)}
-              loading="lazy"
-            />
+            {image && (
+              <img
+                className="step-image"
+                src={image}
+                alt=""
+                loading="lazy"
+                decoding="async"
+              />
+            )}
 
             <div className="step-content">
               <div className="step-top">
-                <span className="step-number">0{i + 1}</span>
-                <Icon strokeWidth={1.4} />
+                <span className="step-number">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+
+                <Icon
+                  strokeWidth={1.4}
+                  aria-hidden="true"
+                />
               </div>
-              <h3>{pick(l, de, en)}</h3>
-              <p>{pick(l, d, e)}</p>
+
+              <h3>{pick(l, titleDe, titleEn)}</h3>
+
+              <p>{pick(l, textDe, textEn)}</p>
             </div>
           </article>
         );
