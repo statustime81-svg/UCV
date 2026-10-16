@@ -1,5 +1,17 @@
-// Food concept images for the gallery.
-export const galleryImages = [
+export type GalleryCategory = "food" | "spaces" | "people";
+
+export type GalleryImage = {
+  src: string;
+  category: GalleryCategory;
+  de: string;
+  en: string;
+};
+
+// Order controls the gallery display.
+// These are concept visuals, not photographs of operating UCV locations.
+// Add approved actual photographs before these entries when supplied.
+
+export const galleryImages: GalleryImage[] = [
   {
     src: "/assets/placeholders/gallery-chicken-fries.png",
     category: "food",
@@ -15,15 +27,16 @@ export const galleryImages = [
   {
     src: "/assets/placeholders/gallery-restaurant-concept.png",
     category: "spaces",
-    de: "Restaurant · Designkonzept",
-    en: "Restaurant · design concept",
+    de: "Restaurant · Zukunftskonzept, kein bestätigter Standort",
+    en: "Restaurant · future concept, not a confirmed location",
   },
   {
     src: "/assets/placeholders/truck-concept.png",
     category: "spaces",
-    de: "Food-Truck · Designkonzept",
-    en: "Food truck · design concept",
+    de: "Food-Truck · Zukunftskonzept, kein bestätigter Standort",
+    en: "Food truck · future concept, not a confirmed location",
   },
 ];
 
-// Approved team or owner portraits can be added here with category: "people".
+// Add approved team or partner photographs with category: "people".
+// The People filter stays hidden until at least one entry exists.
