@@ -1,6 +1,5 @@
 import FoodAccent from "../../components/FoodAccent";
-import type { Lang } from "../../content/site";
-import { url } from "../../content/site";
+import { Lang, url } from "../../content/site";
 import GalleryGrid from "../gallery/GalleryGrid";
 
 export default function GallerySection({ l }: { l: Lang }) {
@@ -22,13 +21,13 @@ export default function GallerySection({ l }: { l: Lang }) {
 
           <p>
             {isGerman
-              ? "Entdecke unsere Food-Marken und die Ideen hinter dem Partnerschaftsmodell. Konzeptbilder sind als solche gekennzeichnet und zeigen keine bestätigten UCV-Standorte."
+              ? "Entdecke unsere Food-Marken und die Ideen hinter dem Partnerschaftsmodell. Konzeptbilder sind gekennzeichnet und zeigen keine bestätigten UCV-Standorte."
               : "Explore our food brands and the ideas behind our partnership model. Concept visuals are labelled and do not represent confirmed UCV locations."}
           </p>
         </div>
 
         <a className="brand-pill" href={url(l, "gallery")}>
-          {isGerman ? "Galerie ansehen" : "View gallery"} <span>+</span>
+          {isGerman ? "Galerie ansehen" : "View gallery"} +
         </a>
       </div>
 
