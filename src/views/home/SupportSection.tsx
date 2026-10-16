@@ -1,7 +1,10 @@
 "use client";
 
+import type { CSSProperties } from "react";
 import FoodAccent from "../../components/FoodAccent";
-import { Lang, support } from "../../content/site";
+import { support } from "../../content/site";
+import type { Lang } from "../../content/site";
+import { assets } from "../../content/assets";
 import { useContent } from "../../content/ContentProvider";
 import { Heading } from "../../components/Ui";
 import {
@@ -34,6 +37,11 @@ const supportImages = [
 export default function SupportSection({ l }: { l: Lang }) {
   const { pick, content } = useContent();
 
+  const supportFoodImage =
+    content.brands.find(
+      (brand) => brand.enabled && brand.slug === "fry-rebels"
+    )?.image || assets.fryFood;
+
   return (
     <section className="section support">
       <div className="section-number">
@@ -42,57 +50,92 @@ export default function SupportSection({ l }: { l: Lang }) {
 
       <div className="support-intro" data-reveal>
         <Heading
-          label={pick(l, "WAS WIR MITBRINGEN", "WHAT WE BRING")}
+          label={pick(
+            l,
+            "WAS WIR MITBRINGEN",
+            "WHAT WE BRING"
+          )}
           title={pick(
             l,
-            "DU MACHST DAS ESSEN.\nWIR MACHEN GEMEINSAM WEITER.",
-            "YOU MAKE THE FOOD.\nWE MOVE FORWARD TOGETHER."
+            "DU BEREITEST ZU.\nWIR UNTERSTÜTZEN DEIN LIEFERGESCHÄFT.",
+            "YOU PREPARE THE FOOD.\nWE SUPPORT YOUR DELIVERY BUSINESS."
           )}
           text={pick(
             l,
-            "Von der ersten Menüidee bis zur laufenden Abstimmung: Unterstützung für den Alltag deiner Küche.",
-            "From the first menu idea to ongoing conversations: support for your everyday kitchen operations."
+            "UCV unterstützt dich bei Menü, Preisgestaltung, Lieferplattformen, Marketing und Mitarbeiterschulung. Dein Team bereitet die Bestellungen zu. Den konkreten Leistungsumfang stimmen wir vor dem Start gemeinsam ab.",
+            "UCV supports you with menus, pricing, delivery platforms, marketing, and staff training. Your team prepares the orders. The specific support scope is agreed together before launch."
           )}
         />
 
         <div className="support-food-image">
           <img
-            src={content.brands[0]?.image}
-            alt={pick(l, "Food-Marken Konzept", "Food brand concept")}
+            src={supportFoodImage}
+            alt={pick(
+              l,
+              "Fry Rebels – Food-Konzept",
+              "Fry Rebels – food concept"
+            )}
+            loading="lazy"
+            decoding="async"
           />
-          <span>BRAND / MENU / SUPPORT</span>
+
+          <span>
+            {pick(
+              l,
+              "MARKE / MENÜ / SUPPORT",
+              "BRAND / MENU / SUPPORT"
+            )}
+          </span>
         </div>
       </div>
 
       <div className="support-grid">
-        {support.map(([de, en, d, e], i) => {
-          const Icon = icons[i];
+        {support.map(
+          ([titleDe, titleEn, textDe, textEn], index) => {
+            const Icon = icons[index] ?? MessagesSquare;
+            const image = supportImages[index];
 
-          return (
-            <article
-              key={de}
-              data-reveal
-              style={{ "--delay": `${(i % 3) * 65}ms` } as React.CSSProperties}
-            >
-              <img
-                className="support-bg"
-                src={supportImages[i]}
-                alt=""
-                loading="lazy"
-              />
+            return (
+              <article
+                key={titleDe}
+                data-reveal
+                style={
+                  {
+                    "--delay": `${(index % 3) * 65}ms`,
+                  } as CSSProperties
+                }
+              >
+                {image && (
+                  <img
+                    className="support-bg"
+                    src={image}
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                  />
+                )}
 
-              <div className="support-card-content">
-                <div className="support-icon">
-                  <Icon size={31} strokeWidth={1.5} />
-                  <span>0{i + 1}</span>
+                <div className="support-card-content">
+                  <div className="support-icon">
+                    <Icon
+                      size={31}
+                      strokeWidth={1.5}
+                      aria-hidden="true"
+                    />
+
+                    <span>
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                  </div>
+
+                  <h3>{pick(l, titleDe, titleEn)}</h3>
+
+                  <p>{pick(l, textDe, textEn)}</p>
                 </div>
-
-                <h3>{pick(l, de, en)}</h3>
-                <p>{pick(l, d, e)}</p>
-              </div>
-            </article>
-          );
-        })}
+              </article>
+            );
+          }
+        )}
       </div>
 
       <FoodAccent pizza={false} />
