@@ -42,17 +42,17 @@ export const assets = {
 
   // Fry Rebels
   fryFood: "/assets/placeholders/fry-food.webp",
-  fryLogo: "/assets/fry-logo.png",
+  fryLogo: "/assets/fry-rebels-logo-transparent.png",
   fryRebelsDetail01: "/assets/fry-rebels/products/rebel-feast.webp",
   fryRebelsDetail02: "/assets/fry-rebels/products/loaded-fries.webp",
 
   // Fresh Crust Pizza
   pizzaFood: "/assets/fresh-crust-pizza-food.webp",
-  pizzaLogo: "/assets/fresh-crust-pizza-logo.jpeg",
+  pizzaLogo: "/assets/fresh-crust-pizza-logo-transparent.png",
   freshCrustDetail01: "/assets/pizza.webp",
   freshCrustDetail02: "/assets/placeholders/gallery-pizza-pasta.webp",
 
   // Concept image until Bharat Origins product photos are provided.
-  bharatLogo: "/assets/bharat-origins-logo.png",
+  bharatLogo: "/assets/bharat-origins-logo-transparent.png",
   bharatFood: "/assets/bharat-origins-food-concept.webp",
 };

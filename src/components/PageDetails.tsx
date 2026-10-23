@@ -12,7 +12,7 @@ const pageImages: Partial<Record<DetailPage, string[]>> = {
   gallery: [assets.galleryDetail01, assets.galleryDetail02],
   "fry-rebels": [assets.fryRebelsDetail01, assets.fryRebelsDetail02],
   "fresh-crust-pizza": [assets.freshCrustDetail01, assets.freshCrustDetail02],
-  "bharat-origins": [assets.bharatFood, assets.kitchen],
+  "bharat-origins": [assets.bharatFood, assets.bharatFood],
 };
 
 const brandLogos = [assets.fryLogo, assets.pizzaLogo, assets.bharatLogo];

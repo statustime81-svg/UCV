@@ -190,3 +190,43 @@ main section{position:relative}.food-accent{position:absolute;bottom:16px;right:
 .support-grid article{border:0!important;box-shadow:0 16px 38px rgba(0,0,0,.2);transition:transform .35s ease,box-shadow .35s ease!important}
 .support-grid article:hover{transform:translateY(-6px);border:0!important;box-shadow:0 24px 48px rgba(0,0,0,.3)!important}
 .support-grid article:after{border-radius:inherit}
+
+
+/* Transparent brand PNGs sit centered inside a clean white circular badge. */
+.brand-panel .brand-logo-badge {
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border: 0;
+  border-radius: 50% !important;
+  background: #fff !important;
+  box-shadow: none !important;
+}
+
+/* All story-card logos sit centered inside the same white circular badge. */
+.detail-story-visual > .detail-story-brand-stamp {
+  display: grid;
+  place-items: center;
+  width: 86px;
+  height: 86px;
+  padding: 11px;
+  border: 0;
+  border-radius: 50%;
+  background: #fff !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16) !important;
+}
+
+.detail-story-visual .detail-story-brand-logo {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  object-fit: contain;
+}
+
+@media (max-width: 580px) {
+  .detail-story-visual > .detail-story-brand-stamp {
+    width: 68px;
+    height: 68px;
+    padding: 8px;
+  }
+}
