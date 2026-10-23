@@ -19,10 +19,10 @@ const icons = [
 ];
 
 const stepImages = [
-  "/assets/placeholders/restaurant-vorstellen.png",
-  "/assets/placeholders/find-right-fit.png",
-  "/assets/placeholders/prepare-to-launch.png",
-  "/assets/placeholders/launch-together.png",
+  "/assets/placeholders/restaurant-vorstellen.webp",
+  "/assets/placeholders/find-right-fit.webp",
+  "/assets/placeholders/prepare-to-launch.webp",
+  "/assets/placeholders/launch-together.webp",
 ];
 
 export default function Steps({ l }: { l: Lang }) {

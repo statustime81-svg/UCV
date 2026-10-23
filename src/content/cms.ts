@@ -15,7 +15,7 @@ export type Brand = {
     tag: string;
     de: string;
     en: string;
-    theme: 'fry' | 'pizza';
+    theme: 'fry' | 'pizza' | 'indian';
     enabled: boolean;
 };
 export type Content = {
@@ -37,7 +37,7 @@ export type Content = {
         legalApproved: boolean;
     };
 };
-export const defaults: Content = { texts, images: { ucvLogo: assets.ucvLogo, hero: assets.hero, aboutLogo: assets.aboutLogo, kitchen: assets.kitchen }, faqs, brands: [{ slug: 'fry-rebels', name: 'Fry Rebels', categories: ['Chicken Burger', 'Fried Chicken', 'Wings', 'Tenders', 'Fries', 'Loaded Fries'], image: assets.fryFood, logo: assets.fryLogo, tag: 'CHICKEN & FRIES', de: 'Knusprig. Saftig. Voller Charakter.', en: 'Crispy. Juicy. Full of character.', theme: 'fry', enabled: true }, { slug: 'fresh-crust-pizza', name: 'Fresh Crust Pizza', categories: ['Pizza', 'Pasta'], image: assets.pizzaFood, logo: assets.pizzaLogo, tag: 'PIZZA & PASTA', de: 'Vertraute Favoriten. Frisch gedacht.', en: 'Familiar favourites. A fresh perspective.', theme: 'pizza', enabled: true }], settings: { email: 'partners@urbanculinaryventure.de', phone: '+49 152 19583294', whatsapp: 'https://wa.me/4915219583294', locationDe: 'Berlin, Deutschland', locationEn: 'Berlin, Germany', legalName: '', legalAddress: '', legalRepresentative: '', legalRegister: '', legalVat: '', legalApproved: false } };
+export const defaults: Content = { texts, images: { ucvLogo: assets.ucvLogo, hero: assets.hero, aboutLogo: assets.aboutLogo, kitchen: assets.kitchen }, faqs, brands: [{ slug: 'fry-rebels', name: 'Fry Rebels', categories: ['Chicken Burger', 'Fried Chicken', 'Wings', 'Tenders', 'Fries', 'Loaded Fries'], image: assets.fryFood, logo: assets.fryLogo, tag: 'CHICKEN & FRIES', de: 'Knusprig. Saftig. Voller Charakter.', en: 'Crispy. Juicy. Full of character.', theme: 'fry', enabled: true }, { slug: 'fresh-crust-pizza', name: 'Fresh Crust Pizza', categories: ['Pizza', 'Pasta'], image: assets.pizzaFood, logo: assets.pizzaLogo, tag: 'PIZZA & PASTA', de: 'Vertraute Favoriten. Frisch gedacht.', en: 'Familiar favourites. A fresh perspective.', theme: 'pizza', enabled: true }, { slug: 'bharat-origins', name: 'Bharat Origins', categories: ['Indian cuisine'], image: assets.bharatFood, logo: assets.bharatLogo, tag: 'MODERN INDIAN KITCHEN', de: 'Eine moderne indische Food-Marke für bestehende Restaurantküchen.', en: 'A modern Indian food brand for existing restaurant kitchens.', theme: 'indian', enabled: true }], settings: { email: 'partners@urbanculinaryventure.de', phone: '+49 152 19583294', whatsapp: 'https://wa.me/4915219583294', locationDe: 'Berlin, Deutschland', locationEn: 'Berlin, Germany', legalName: '', legalAddress: '', legalRepresentative: '', legalRegister: '', legalVat: '', legalApproved: false } };
 export function safeAsset(s: unknown) { return typeof s === 'string' && s.length < 1000 && (/^\/assets\/[\w./-]+$/.test(s) || /^\/media\/[a-f0-9-]+\.(png|jpg|webp)$/.test(s)); }
 export function validateContent(x: unknown): x is Content {
     if (!x || typeof x !== 'object')
@@ -49,7 +49,7 @@ export function validateContent(x: unknown): x is Content {
         return false;
     if (!Array.isArray(c.faqs) || c.faqs.length > 50 || c.faqs.some(f => !Array.isArray(f) || f.length !== 4 || f.some(t => typeof t !== 'string' || t.length > 5000)))
         return false;
-    if (!Array.isArray(c.brands) || c.brands.length > 30 || c.brands.some(b => !b || !/^([a-z][a-z0-9]*)(-[a-z0-9]+)*$/.test(b.slug) || ['en', 'admin', 'api', 'media', 'brands', 'about', 'partner', 'privacy', 'impressum', 'how-it-works', 'gallery'].includes(b.slug) || typeof b.name !== 'string' || b.name.length > 100 || !Array.isArray(b.categories) || b.categories.length > 30 || b.categories.some(v => typeof v !== 'string' || v.length > 100) || !safeAsset(b.image) || b.logo !== '' && !safeAsset(b.logo) || typeof b.tag !== 'string' || b.tag.length > 100 || typeof b.de !== 'string' || typeof b.en !== 'string' || b.de.length > 5000 || b.en.length > 5000 || !['fry', 'pizza'].includes(b.theme) || typeof b.enabled !== 'boolean'))
+    if (!Array.isArray(c.brands) || c.brands.length > 30 || c.brands.some(b => !b || !/^([a-z][a-z0-9]*)(-[a-z0-9]+)*$/.test(b.slug) || ['en', 'admin', 'api', 'media', 'brands', 'about', 'partner', 'privacy', 'impressum', 'how-it-works', 'gallery'].includes(b.slug) || typeof b.name !== 'string' || b.name.length > 100 || !Array.isArray(b.categories) || b.categories.length > 30 || b.categories.some(v => typeof v !== 'string' || v.length > 100) || !safeAsset(b.image) || b.logo !== '' && !safeAsset(b.logo) || typeof b.tag !== 'string' || b.tag.length > 100 || typeof b.de !== 'string' || typeof b.en !== 'string' || b.de.length > 5000 || b.en.length > 5000 || !['fry', 'pizza', 'indian'].includes(b.theme) || typeof b.enabled !== 'boolean'))
         return false;
     if (new Set(c.brands.map(b => b.slug)).size !== c.brands.length)
         return false;

@@ -58,8 +58,8 @@ export default function Hero({ l }: { l: Lang }) {
           <p>
             {pick(
               l,
-              "Starte mit Fry Rebels oder Fresh Crust Pizza ein zusätzliches Lieferangebot aus deiner bestehenden Restaurantküche. UCV unterstützt dich bei Menü, Preisgestaltung, Lieferplattformen, Marketing und Mitarbeiterschulung. Dein Team bereitet die Bestellungen zu.",
-              "Add a new delivery offering to your existing restaurant kitchen with Fry Rebels or Fresh Crust Pizza. UCV supports you with menus, pricing, delivery platforms, marketing, and staff training. Your team prepares the orders."
+              "Ergänze deine bestehende Restaurantküche mit Fry Rebels, Fresh Crust Pizza oder Bharat Origins. UCV unterstützt bei Menü, Preisgestaltung, Lieferplattformen, Marketing und Mitarbeiterschulung. Dein Team bereitet die Bestellungen zu.",
+              "Add Fry Rebels, Fresh Crust Pizza, or Bharat Origins to your existing restaurant kitchen. UCV supports menus, pricing, delivery platforms, marketing, and staff training. Your team prepares the orders."
             )}
           </p>
 

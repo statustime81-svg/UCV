@@ -68,6 +68,7 @@ export default function Impressum({ l }: { l: Lang }) {
             <ul>
                 <li><strong>Fry Rebels:</strong> {de ? 'Chicken-Burger, frittiertes Hähnchen, Wings, Tenders, Pommes und Loaded Fries.' : 'Chicken burgers, fried chicken, wings, tenders, fries and loaded fries.'}</li>
                 <li><strong>Fresh Crust Pizza:</strong> {de ? 'Pizza und Pasta.' : 'Pizza and pasta.'}</li>
+                <li><strong>Bharat Origins:</strong> {de ? 'Modernes indisches Küchenkonzept; konkrete Gerichte werden vor dem Launch abgestimmt.' : 'Modern Indian kitchen concept; specific dishes are agreed before launch.'}</li>
             </ul>
         </section>
 

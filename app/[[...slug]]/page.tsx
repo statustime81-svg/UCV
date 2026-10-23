@@ -42,6 +42,6 @@ export default async function Page({ params }: {
         notFound();
     if (['fry-rebels', 'fresh-crust-pizza'].includes(path) && !isBrand)
         notFound();
-    return <ContentProvider content={content}><PartnerProvider l={l}><SiteMotion /><FloatingControls l={l}/><a className="skip" href="#main">{pick(l, 'Zum Inhalt', 'Skip to content')}</a><div className="site"><Header l={l} path={path}/><main id="main">{isBrand ? <BrandDetail l={l} slug={path}/> : <Component l={l}/>}</main><Footer l={l}/></div></PartnerProvider></ContentProvider>;
+    return <ContentProvider content={content}><PartnerProvider l={l}><SiteMotion /><FloatingControls l={l} path={path}/><a className="skip" href="#main">{pick(l, 'Zum Inhalt', 'Skip to content')}</a><div className="site"><Header l={l} path={path}/><main id="main">{isBrand ? <BrandDetail l={l} slug={path}/> : <Component l={l}/>}</main><Footer l={l}/></div></PartnerProvider></ContentProvider>;
 }
 

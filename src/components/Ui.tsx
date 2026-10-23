@@ -85,7 +85,14 @@ export function Heading({
   );
 }
 
-export function Cta({ l }: { l: Lang }) {
+export function Cta({
+  l,
+  foodImage,
+}: {
+  l: Lang;
+  /** Brand-specific decoration; null hides the food visual. */
+  foodImage?: string | null;
+}) {
   const { pick, contact } = useContent();
 
   return (
@@ -171,16 +178,18 @@ export function Cta({ l }: { l: Lang }) {
           </div>
         </div>
 
-        <img
-          className="cta-pizza"
-          data-scroll-spin
-          src={assets.pizzaCutout}
-          alt=""
-          aria-hidden="true"
-          loading="lazy"
-          decoding="async"
-          style={{ pointerEvents: "none" }}
-        />
+        {foodImage !== null && (
+          <img
+            className="cta-pizza"
+            data-scroll-spin
+            src={foodImage ?? assets.pizzaCutout}
+            alt=""
+            aria-hidden="true"
+            loading="lazy"
+            decoding="async"
+            style={{ pointerEvents: "none" }}
+          />
+        )}
 
         <div className="cta-bottom">
           {pick(

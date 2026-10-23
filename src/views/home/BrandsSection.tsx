@@ -24,13 +24,13 @@ export default function BrandsSection({ l }: { l: Lang }) {
           )}
           title={pick(
             l,
-            "ZWEI MARKEN.\nFÜR DEINE KÜCHE.",
-            "TWO BRANDS.\nFOR YOUR KITCHEN."
+            "DREI MARKEN.\nFÜR DEINE KÜCHE.",
+            "THREE BRANDS.\nFOR YOUR KITCHEN."
           )}
           text={pick(
             l,
-            "Fry Rebels für Chicken Burger, Fried Chicken, Wings, Tenders, Fries und Loaded Fries. Fresh Crust Pizza für Pizza und Pasta. Gemeinsam prüfen wir, welche Marke zu deiner Küche passt. Dein bestehendes Restaurant und Menü können weitergeführt werden.",
-            "Fry Rebels for chicken burgers, fried chicken, wings, tenders, fries, and loaded fries. Fresh Crust Pizza for pizza and pasta. Together, we assess which brand fits your kitchen. You can continue operating your existing restaurant and menu."
+            "Fry Rebels für Chicken Burger, Fried Chicken, Wings, Tenders, Fries und Loaded Fries. Fresh Crust Pizza für Pizza und Pasta. Bharat Origins ergänzt das Portfolio als modernes indisches Küchenkonzept. Gemeinsam prüfen wir, welche Marke zu deiner Küche passt.",
+            "Fry Rebels for chicken burgers, fried chicken, wings, tenders, fries, and loaded fries. Fresh Crust Pizza for pizza and pasta. Bharat Origins adds a modern Indian kitchen concept. Together, we assess which brand fits your kitchen."
           )}
         />
       </div>

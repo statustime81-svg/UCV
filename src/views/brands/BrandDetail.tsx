@@ -7,6 +7,7 @@ import type { Lang } from "../../content/site";
 import { assets } from "../../content/assets";
 import { useContent } from "../../content/ContentProvider";
 import { Button, Cta } from "../../components/Ui";
+import FryProducts from "../fry-rebels/FryProducts";
 
 type BrandDetailProps = {
   l: Lang;
@@ -24,12 +25,24 @@ export default function BrandDetail({ l, slug }: BrandDetailProps) {
 
   const isPizza = slug === "fresh-crust-pizza";
   const isFry = slug === "fry-rebels";
+  const isIndian = slug === "bharat-origins";
 
-  const logo = isPizza ? assets.pizzaLogo : brand.logo;
+  const logo = isPizza
+    ? assets.pizzaLogo
+    : isIndian
+      ? assets.bharatLogo
+      : assets.fryLogo;
+  const brandImage = isPizza
+    ? assets.pizzaFood
+    : isIndian
+      ? assets.bharatFood
+      : assets.fryFood;
 
   const subtitle = isPizza
     ? pick(l, "Pizza & Pasta", "Pizza & Pasta")
-    : isFry
+    : isIndian
+      ? "MODERN INDIAN KITCHEN"
+      : isFry
       ? pick(
           l,
           "Crispy Chicken, Burger & Loaded Fries",
@@ -43,7 +56,13 @@ export default function BrandDetail({ l, slug }: BrandDetailProps) {
         "Fresh Crust Pizza ist unsere Marke für Pizza und Pasta. Gemeinsam prüfen wir, wie sich das Konzept mit deiner vorhandenen Ausstattung und deinen Küchenabläufen umsetzen lässt.",
         "Fresh Crust Pizza is our pizza and pasta brand. Together, we assess how the concept can work with your existing equipment and kitchen operations."
       )
-    : isFry
+    : isIndian
+      ? pick(
+          l,
+          "Bharat Origins ist ein modernes indisches Küchenkonzept für bestehende Restaurants. Dein Team bereitet die Bestellungen zu; UCV unterstützt den vereinbarten Markenauftritt und die Abläufe. Die konkreten Gerichte und das Launch-Menü werden vor dem Start gemeinsam festgelegt.",
+          "Bharat Origins is a modern Indian kitchen concept for existing restaurants. Your team prepares orders; UCV supports the agreed brand presentation and operations. Specific dishes and the launch menu are agreed together before launch."
+        )
+      : isFry
       ? pick(
           l,
           "Fry Rebels ist unsere Marke für Chicken Burger, Fried Chicken, Wings, Tenders, Fries und Loaded Fries. Das Konzept verbindet einen eigenständigen Markenauftritt mit klaren Zubereitungs- und Verpackungsabläufen.",
@@ -75,21 +94,24 @@ export default function BrandDetail({ l, slug }: BrandDetailProps) {
         color: "#17171f",
         borderBottom: "1px solid rgba(201, 32, 24, 0.16)",
       }
-    : undefined;
+    : isIndian
+      ? { background: "#fbf4e7", color: "#401322", borderBottom: "1px solid rgba(100, 27, 52, 0.18)" }
+      : undefined;
 
   const logoStyle: CSSProperties = {
     position: "relative",
     display: "block",
-    width: isPizza ? "clamp(180px, 24vw, 300px)" : "220px",
+    width: "108px",
+    height: "108px",
     maxWidth: "100%",
-    height: "auto",
-    maxHeight: isPizza ? "220px" : "150px",
+    maxHeight: "108px",
     objectFit: "contain",
-    objectPosition: "left center",
-    margin: "0 0 24px",
-    padding: isPizza ? "12px" : 0,
-    background: isPizza ? "#ffffff" : undefined,
-    borderRadius: isPizza ? "18px" : undefined,
+    objectPosition: "center",
+    margin: "0 0 16px",
+    padding: "9px",
+    background: isIndian ? "#fbf4e7" : "#ffffff",
+    borderRadius: "50%",
+    border: "1px solid rgba(21, 27, 22, 0.14)",
     boxSizing: "border-box",
     transform: "none",
     filter: "none",
@@ -98,15 +120,13 @@ export default function BrandDetail({ l, slug }: BrandDetailProps) {
   return (
     <>
       <section
-        className={`brand-hero ${
-          isPizza ? "pizza-detail" : "fry-detail"
-        }`}
+        className={`brand-hero ${isPizza ? "pizza-detail" : isIndian ? "indian-detail" : "fry-detail"}`}
         style={pizzaHeroStyle}
       >
         <div data-reveal>
           <span
             className="eyebrow"
-            style={isPizza ? { color: "#b92318" } : undefined}
+            style={isPizza ? { color: "#b92318" } : isIndian ? { color: "#8a542d" } : undefined}
           >
             URBAN CULINARY VENTURE / {brand.tag}
           </span>
@@ -121,15 +141,15 @@ export default function BrandDetail({ l, slug }: BrandDetailProps) {
             />
           )}
 
-          <h1 style={isPizza ? { color: "#17171f" } : undefined}>
+          <h1 style={isPizza ? { color: "#17171f" } : isIndian ? { color: "#641b34" } : undefined}>
             {brand.name}
           </h1>
 
-          <h2 style={isPizza ? { color: "#b92318" } : undefined}>
+          <h2 style={isPizza ? { color: "#b92318" } : isIndian ? { color: "#8a542d" } : undefined}>
             {subtitle}
           </h2>
 
-          <p style={isPizza ? { color: "#45454d" } : undefined}>
+          <p style={isPizza ? { color: "#45454d" } : isIndian ? { color: "#5a4c43" } : undefined}>
             {description}
           </p>
 
@@ -137,7 +157,7 @@ export default function BrandDetail({ l, slug }: BrandDetailProps) {
         </div>
 
         <img
-          src={brand.image}
+          src={brandImage}
           alt={pick(
             l,
             `${brand.name} – Food-Konzept`,
@@ -155,16 +175,29 @@ export default function BrandDetail({ l, slug }: BrandDetailProps) {
             objectFit: "contain",
             alignSelf: "center",
             borderRadius: "24px",
+            background: isIndian ? "#fbf4e7" : isPizza ? "#fff8ee" : "#f3f0e8",
           }}
         />
 
-        <FoodAccent pizza={isPizza} />
+        <span className="brand-hero-caption">
+          {pick(
+            l,
+            "Food-Konzeptvisualisierung · kein bestätigtes Produktfoto",
+            "Food concept visual · not a confirmed product photograph"
+          )}
+        </span>
+
+        <FoodAccent
+          pizza={isPizza}
+          spin
+          src={isIndian ? assets.bharatBiryaniPlate : isFry ? assets.burgerSpin : assets.pizzaCutout}
+        />
       </section>
 
       <section className="section" data-reveal>
         <span
           className="eyebrow"
-          style={isPizza ? { color: "#b92318" } : undefined}
+          style={isPizza ? { color: "#b92318" } : isIndian ? { color: "#641b34" } : undefined}
         >
           {pick(l, "DAS KONZEPT", "THE CONCEPT")}
         </span>
@@ -176,7 +209,9 @@ export default function BrandDetail({ l, slug }: BrandDetailProps) {
                 "Pizza und Pasta für dein Lieferangebot.",
                 "Pizza and pasta for your delivery offering."
               )
-            : isFry
+            : isIndian
+              ? pick(l, "Ein modernes indisches Küchenkonzept.", "A modern Indian kitchen concept.")
+              : isFry
               ? pick(
                   l,
                   "Chicken, Burger und Beilagen.",
@@ -197,19 +232,19 @@ export default function BrandDetail({ l, slug }: BrandDetailProps) {
               style={
                 {
                   "--delay": `${index * 50}ms`,
-                  ...(isPizza
+                  ...((isPizza || isIndian)
                     ? {
-                        background: "#fff8ee",
-                        color: "#17171f",
-                        border: "1px solid rgba(201, 32, 24, 0.18)",
-                        borderTop: "4px solid #f2b632",
+                        background: isIndian ? "#fbf4e7" : "#fff8ee",
+                        color: isIndian ? "#401322" : "#17171f",
+                        border: isIndian ? "1px solid rgba(100, 27, 52, 0.18)" : "1px solid rgba(201, 32, 24, 0.18)",
+                        borderTop: isIndian ? "4px solid #c88f45" : "4px solid #f2b632",
                       }
                     : {}),
                 } as CSSProperties
               }
             >
               <span
-                style={isPizza ? { color: "#b92318" } : undefined}
+                style={isPizza ? { color: "#b92318" } : isIndian ? { color: "#8a542d" } : undefined}
               >
                 {String(index + 1).padStart(2, "0")}
               </span>
@@ -227,14 +262,23 @@ export default function BrandDetail({ l, slug }: BrandDetailProps) {
           )}
         </p>
 
-        <FoodAccent pizza={isPizza} />
+        <FoodAccent
+          pizza={isPizza}
+          spin
+          src={isIndian ? assets.bharatBiryaniPlate : isFry ? assets.burgerSpin : assets.pizzaCutout}
+        />
       </section>
 
-      {(slug === "fry-rebels" || slug === "fresh-crust-pizza") && (
+      {isFry && <FryProducts l={l} />}
+
+      {(slug === "fry-rebels" || slug === "fresh-crust-pizza" || slug === "bharat-origins") && (
         <PageDetails l={l} page={slug} />
       )}
 
-      <Cta l={l} />
+      <Cta
+        l={l}
+        foodImage={isIndian ? assets.bharatBiryaniPlate : isPizza ? assets.pizzaCutout : assets.burgerSpin}
+      />
     </>
   );
 }

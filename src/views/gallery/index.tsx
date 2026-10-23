@@ -20,8 +20,8 @@ export default function Gallery({ l }: { l: Lang }) {
 
         <p data-reveal>
           {l === "de"
-            ? "Entdecke die Food-Welt von Fry Rebels und Fresh Crust Pizza. Unser aktueller Fokus liegt auf zusätzlichen Lieferangeboten aus bestehenden Restaurantküchen."
-            : "Explore the food world of Fry Rebels and Fresh Crust Pizza. Our current focus is on additional delivery offerings from existing restaurant kitchens."}
+            ? "Entdecke Fry Rebels, Fresh Crust Pizza und Bharat Origins. Unser aktueller Fokus liegt auf zusätzlichen Lieferangeboten aus bestehenden Restaurantküchen."
+            : "Explore Fry Rebels, Fresh Crust Pizza, and Bharat Origins. Our current focus is on additional delivery offerings from existing restaurant kitchens."}
         </p>
 
         <FoodAccent pizza={true} />

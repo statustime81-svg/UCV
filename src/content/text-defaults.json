@@ -386,7 +386,7 @@
   },
   "Zwei eigenständige Food-Marken für den Lieferbetrieb. Gemeinsam prüfen wir, welches Konzept zu deinem Restaurant passt.": {
     "de": "Zwei eigenständige Food-Marken für den Lieferbetrieb. Gemeinsam prüfen wir, welches Konzept zu deinem Restaurant passt.",
-    "en": "Two distinct food brands designed for delivery. Together, we explore which concept fits your restaurant.",
+    "en": "Three distinct food brands designed for delivery. Together, we explore which concept fits your restaurant.",
     "group": "brands"
   },
   "Alle": {
@@ -434,14 +434,14 @@
     "en": "DISTINCT CHARACTER. DISTINCT FLAVOUR.",
     "group": "home"
   },
-  "ZWEI MARKEN.\nKEIN EINHEITSBREI.": {
-    "de": "ZWEI MARKEN.\nKEIN EINHEITSBREI.",
-    "en": "TWO BRANDS.\nNO SAME OLD TASTE.",
+  "DREI MARKEN.\nKEIN EINHEITSBREI.": {
+    "de": "DREI MARKEN.\nKEIN EINHEITSBREI.",
+    "en": "THREE BRANDS.\nNO SAME OLD TASTE.",
     "group": "home"
   },
-  "Crispy Chicken oder Pizza und Pasta: zwei eigenständige Konzepte für deine bestehende Restaurantküche.": {
-    "de": "Crispy Chicken oder Pizza und Pasta: zwei eigenständige Konzepte für deine bestehende Restaurantküche.",
-    "en": "Crispy chicken or pizza and pasta: two distinct concepts for your existing restaurant kitchen.",
+  "Crispy Chicken, Pizza und Pasta oder moderne indische Küche: drei eigenständige Konzepte für deine bestehende Restaurantküche.": {
+    "de": "Crispy Chicken, Pizza und Pasta oder moderne indische Küche: drei eigenständige Konzepte für deine bestehende Restaurantküche.",
+    "en": "Crispy chicken, pizza and pasta, or modern Indian cuisine: three distinct concepts for your existing restaurant kitchen.",
     "group": "home"
   },
   "GUT ZU WISSEN": {

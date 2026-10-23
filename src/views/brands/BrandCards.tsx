@@ -16,8 +16,18 @@ export default function BrandCards({ l }: { l: Lang }) {
         .map((brand, index) => {
           const isPizza = brand.slug === "fresh-crust-pizza";
           const isFry = brand.slug === "fry-rebels";
+          const isIndian = brand.slug === "bharat-origins";
 
-          const logo = isPizza ? assets.pizzaLogo : brand.logo;
+          const logo = isPizza
+            ? assets.pizzaLogo
+            : isIndian
+              ? assets.bharatLogo
+              : assets.fryLogo;
+          const image = isPizza
+            ? assets.pizzaFood
+            : isIndian
+              ? assets.bharatFood
+              : assets.fryFood;
 
           const tag = isPizza ? "PIZZA & PASTA" : brand.tag;
 
@@ -42,7 +52,9 @@ export default function BrandCards({ l }: { l: Lang }) {
                   color: "#17171f",
                   borderColor: "#e5c8b5",
                 }
-              : undefined;
+              : isIndian
+                ? { background: "#fbf4e7", color: "#401322", borderColor: "#d9b88b" }
+                : undefined;
 
           return (
             <article
@@ -58,7 +70,9 @@ export default function BrandCards({ l }: { l: Lang }) {
                 style={
                   isPizza
                     ? { color: "#17171f" }
-                    : undefined
+                    : isIndian
+                      ? { color: "#401322" }
+                      : undefined
                 }
               >
                 <div className="brand-panel-header">
@@ -74,7 +88,9 @@ export default function BrandCards({ l }: { l: Lang }) {
                   style={
                     isPizza
                       ? { color: "#b92318" }
-                      : undefined
+                      : isIndian
+                        ? { color: "#641b34" }
+                        : undefined
                   }
                 >
                   {brand.name}
@@ -82,7 +98,7 @@ export default function BrandCards({ l }: { l: Lang }) {
 
                 <div className="brand-photo">
                   <img
-                    src={brand.image}
+                    src={image}
                     alt={pick(
                       l,
                       `${brand.name} – Food-Konzept`,
@@ -95,10 +111,10 @@ export default function BrandCards({ l }: { l: Lang }) {
                   <span
                     className="photo-tag"
                     style={
-                      isPizza
+                      isPizza || isIndian
                         ? {
-                            background: "#17171f",
-                            color: "#ffffff",
+                            background: isIndian ? "#641b34" : "#17171f",
+                            color: isIndian ? "#fff4e5" : "#ffffff",
                           }
                         : undefined
                     }
@@ -107,46 +123,13 @@ export default function BrandCards({ l }: { l: Lang }) {
                   </span>
 
                   {logo && (
-                    <div
-                      className="brand-logo-badge"
-                      style={
-                        isPizza
-                          ? {
-                              width: "clamp(90px, 12vw, 145px)",
-                              maxWidth: "40%",
-                              height: "auto",
-                              aspectRatio: "3 / 2",
-                              padding: "6px",
-                              background: "#ffffff",
-                              borderRadius: "12px",
-                              display: "grid",
-                              placeItems: "center",
-                              overflow: "hidden",
-                              boxSizing: "border-box",
-                          }
-                          : undefined
-                      }
-                    >
+                    <div className={`brand-logo-badge ${brand.slug}-logo-badge`}>
                       <img
                         src={logo}
                         alt={`${brand.name} logo`}
                         loading="lazy"
                         decoding="async"
-                        style={
-                          isPizza
-                            ? {
-                                position: "static",
-                                display: "block",
-                                width: "100%",
-                                height: "100%",
-                                maxWidth: "100%",
-                                maxHeight: "100%",
-                                objectFit: "contain",
-                                transform: "none",
-                                filter: "none",
-                              }
-                            : undefined
-                        }
+                        className="brand-logo-image"
                       />
                     </div>
                   )}
@@ -157,7 +140,9 @@ export default function BrandCards({ l }: { l: Lang }) {
                     style={
                       isPizza
                         ? { color: "#45454d" }
-                        : undefined
+                        : isIndian
+                          ? { color: "#5a4c43" }
+                          : undefined
                     }
                   >
                     {description}
@@ -172,7 +157,9 @@ export default function BrandCards({ l }: { l: Lang }) {
                             color: "#17171f",
                             borderColor: "#17171f",
                           }
-                        : undefined
+                        : isIndian
+                          ? { background: "#c88f45", color: "#401322", borderColor: "#641b34" }
+                          : undefined
                     }
                   >
                     {pick(l, "Marke entdecken", "Explore brand")}

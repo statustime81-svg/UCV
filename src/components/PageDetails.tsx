@@ -10,7 +10,12 @@ const pageImages: Partial<Record<DetailPage, string[]>> = {
   "how-it-works": [assets.howStep1, assets.howStep2, assets.howStep3],
   about: [assets.about01, assets.about02, assets.about03],
   gallery: [assets.galleryDetail01, assets.galleryDetail02],
+  "fry-rebels": [assets.fryRebelsDetail01, assets.fryRebelsDetail02],
+  "fresh-crust-pizza": [assets.freshCrustDetail01, assets.freshCrustDetail02],
+  "bharat-origins": [assets.bharatFood, assets.kitchen],
 };
+
+const brandLogos = [assets.fryLogo, assets.pizzaLogo, assets.bharatLogo];
 
 function getDetailImage(page: DetailPage, index: number): string {
   const image = pageImages[page]?.[index];
@@ -19,7 +24,15 @@ function getDetailImage(page: DetailPage, index: number): string {
     return image;
   }
 
-  return index % 2 === 0 ? assets.fryFood : assets.pizzaFood;
+  // Generic stories must never fall back to a different brand's food image.
+  return assets.kitchen;
+}
+
+function getStampLogo(page: DetailPage, index: number): string {
+  if (page === "fry-rebels") return assets.fryLogo;
+  if (page === "fresh-crust-pizza") return assets.pizzaLogo;
+  if (page === "bharat-origins") return assets.bharatLogo;
+  return brandLogos[index % brandLogos.length];
 }
 
 export default function PageDetails({
@@ -35,6 +48,7 @@ export default function PageDetails({
     <>
       {sections.map((section, index) => {
         const image = getDetailImage(page, index);
+        const stampLogo = getStampLogo(page, index);
         const title = section[l === "de" ? 0 : 1];
 
         return (
@@ -55,7 +69,7 @@ export default function PageDetails({
               <span className="detail-story-brand-stamp" aria-hidden="true">
                 <img
                   className="detail-story-brand-logo"
-                  src={assets.ucvLogo}
+                  src={stampLogo}
                   alt=""
                 />
               </span>

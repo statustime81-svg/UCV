@@ -26,8 +26,8 @@ export default function Brands({ l }: { l: Lang }) {
         <p>
           {pick(
             l,
-            "Fry Rebels steht für Chicken Burger, Fried Chicken, Wings, Tenders, Fries und Loaded Fries. Fresh Crust Pizza ergänzt unser Portfolio mit Pizza und Pasta. Zwei eigenständige Food-Marken, mit denen geeignete Restaurants ihr bestehendes Angebot um zusätzliche Lieferkonzepte erweitern können.",
-            "Fry Rebels offers chicken burgers, fried chicken, wings, tenders, fries, and loaded fries. Fresh Crust Pizza adds pizza and pasta to our portfolio. Two distinct food brands that allow suitable restaurants to add delivery concepts alongside their existing offering."
+            "Fry Rebels steht für Chicken Burger, Fried Chicken, Wings, Tenders, Fries und Loaded Fries. Fresh Crust Pizza ergänzt unser Portfolio mit Pizza und Pasta. Bharat Origins ist ein modernes indisches Küchenkonzept. Geeignete Restaurants können ihr bestehendes Angebot mit einer passenden Liefermarke erweitern.",
+            "Fry Rebels offers chicken burgers, fried chicken, wings, tenders, fries, and loaded fries. Fresh Crust Pizza adds pizza and pasta to our portfolio, and Bharat Origins is a modern Indian kitchen concept. Suitable restaurants can extend their existing offering with a fitting delivery brand."
           )}
         </p>
 

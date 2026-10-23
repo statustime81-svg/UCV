@@ -13,25 +13,31 @@ export type GalleryImage = {
 
 export const galleryImages: GalleryImage[] = [
   {
-    src: "/assets/placeholders/gallery-chicken-fries.png",
+    src: "/assets/placeholders/gallery-chicken-fries.webp",
     category: "food",
     de: "Chicken & Fries · Food-Konzept",
     en: "Chicken & fries · food concept",
   },
   {
-    src: "/assets/placeholders/gallery-pizza-pasta.png",
+    src: "/assets/placeholders/gallery-pizza-pasta.webp",
     category: "food",
     de: "Pizza & Pasta · Food-Konzept",
     en: "Pizza & pasta · food concept",
   },
   {
-    src: "/assets/placeholders/gallery-restaurant-concept.png",
+    src: "/assets/bharat-origins-food-concept.webp",
+    category: "food",
+    de: "Bharat Origins · indisches Food-Konzept",
+    en: "Bharat Origins · Indian food concept",
+  },
+  {
+    src: "/assets/placeholders/gallery-restaurant-concept.webp",
     category: "spaces",
     de: "Restaurant · Zukunftskonzept, kein bestätigter Standort",
     en: "Restaurant · future concept, not a confirmed location",
   },
   {
-    src: "/assets/placeholders/truck-concept.png",
+    src: "/assets/placeholders/truck-concept.webp",
     category: "spaces",
     de: "Food-Truck · Zukunftskonzept, kein bestätigter Standort",
     en: "Food truck · future concept, not a confirmed location",

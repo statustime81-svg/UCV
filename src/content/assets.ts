@@ -4,45 +4,55 @@
 
 export const assets = {
   // Floating food decorations
-  pizzaCutout: "/assets/placeholders/pizza-cutout.png",
-  burgerAccent: "/assets/placeholders/burger-accent.png",
-  faqFood: "/assets/placeholders/burger-accent.png",
+  pizzaCutout: "/assets/placeholders/pizza-cutout.webp",
+  burgerAccent: "/assets/placeholders/burger-accent.webp",
+  burgerSpin: "/assets/placeholders/fry-rebels-burger-cutout.webp",
+  bharatBiryaniPlate: "/assets/placeholders/bharat-biryani-plate.webp",
+  faqFood: "/assets/placeholders/burger-accent.webp",
 
   // Company and footer logos
   ucvLogo: "/assets/ucv.png",
   developerLogo: "/assets/logo.webp",
 
   // Homepage hero
-  hero: "/assets/placeholders/burger-cutout.png",
+  hero: "/assets/placeholders/burger-cutout.webp",
 
   // Company visuals
   aboutLogo: "/assets/ucv.png",
-  kitchen: "/assets/placeholders/kitchen-concept.png",
+  kitchen: "/assets/placeholders/kitchen-concept.webp",
 
   // About UCV detail sections
-  about01: "/assets/placeholders/about-ucv-01-concept.png",
-  about02: "/assets/placeholders/about-ucv-02-concept.png",
-  about03: "/assets/placeholders/about-ucv-03-concept.png",
+  about01: "/assets/placeholders/about-ucv-01-concept.webp",
+  about02: "/assets/placeholders/about-ucv-02-concept.webp",
+  about03: "/assets/placeholders/about-ucv-03-concept.webp",
 
   // Gallery detail sections
   galleryDetail01: "/assets/placeholders/ucv-gallery-01-concept.webp",
   galleryDetail02: "/assets/placeholders/gallery/ucv-gallery-02-concept.webp",
 
   // Our Brands detail sections
-  brandIdea: "/assets/placeholders/brand-idea-concept.png",
-  brandComparison: "/assets/placeholders/brand-comparison-concept.png",
-  brandLaunch: "/assets/placeholders/launch-service-concept.png",
+  brandIdea: "/assets/placeholders/brand-idea-concept.webp",
+  brandComparison: "/assets/placeholders/brand-comparison-concept.webp",
+  brandLaunch: "/assets/placeholders/launch-service-concept.webp",
 
   // How It Works detail sections
-  howStep1: "/assets/placeholders/how-it-works-01-concept.png",
-  howStep2: "/assets/placeholders/how-it-works-02-concept.png",
-  howStep3: "/assets/placeholders/how-it-works-03-concept.png",
+  howStep1: "/assets/placeholders/how-it-works-01-concept.webp",
+  howStep2: "/assets/placeholders/how-it-works-02-concept.webp",
+  howStep3: "/assets/placeholders/how-it-works-03-concept.webp",
 
   // Fry Rebels
-  fryFood: "/assets/placeholders/fry-food.png",
+  fryFood: "/assets/placeholders/fry-food.webp",
   fryLogo: "/assets/fry-logo.png",
+  fryRebelsDetail01: "/assets/fry-rebels/products/rebel-feast.webp",
+  fryRebelsDetail02: "/assets/fry-rebels/products/loaded-fries.webp",
 
   // Fresh Crust Pizza
-  pizzaFood: "/assets/placeholders/pizza-food.png",
+  pizzaFood: "/assets/fresh-crust-pizza-food.webp",
   pizzaLogo: "/assets/fresh-crust-pizza-logo.jpeg",
+  freshCrustDetail01: "/assets/pizza.webp",
+  freshCrustDetail02: "/assets/placeholders/gallery-pizza-pasta.webp",
+
+  // Concept image until Bharat Origins product photos are provided.
+  bharatLogo: "/assets/bharat-origins-logo.png",
+  bharatFood: "/assets/bharat-origins-food-concept.webp",
 };

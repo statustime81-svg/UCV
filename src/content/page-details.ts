@@ -15,16 +15,16 @@ export const pageDetails = {
     [
       "DIE IDEE",
       "THE IDEA",
-      "ZWEI MARKEN. NEUE MÖGLICHKEITEN FÜR DEINE KÜCHE.",
-      "TWO BRANDS. NEW POSSIBILITIES FOR YOUR KITCHEN.",
+      "DREI MARKEN. NEUE MÖGLICHKEITEN FÜR DEINE KÜCHE.",
+      "THREE BRANDS. NEW POSSIBILITIES FOR YOUR KITCHEN.",
       "Ergänze dein bestehendes Restaurant um ein zusätzliches Lieferangebot mit einer eigenständigen Food-Marke.",
       "Add a distinctive delivery offering to your existing restaurant with a UCV food brand.",
       [
-        "Fry Rebels steht für Chicken Burger, Fried Chicken, Wings, Tenders, Fries und Loaded Fries. Fresh Crust Pizza ist unsere Marke für Pizza und Pasta. Beide Konzepte haben einen eigenen Markenauftritt und werden auf ihre Eignung für deinen Betrieb geprüft.",
+        "Fry Rebels steht für Chicken Burger, Fried Chicken, Wings, Tenders, Fries und Loaded Fries. Fresh Crust Pizza ist unsere Marke für Pizza und Pasta. Bharat Origins ergänzt das Portfolio als modernes indisches Küchenkonzept. Jede Marke hat einen eigenen Auftritt und wird auf ihre Eignung für deinen Betrieb geprüft.",
         "Dein Restaurantname und dein bestehendes Menü können erhalten bleiben. Gemeinsam prüfen wir, ob eine Marke oder gegebenenfalls beide Konzepte zu deiner Ausstattung, deinem Team und deinen verfügbaren Kapazitäten passen.",
       ],
       [
-        "Fry Rebels offers chicken burgers, fried chicken, wings, tenders, fries, and loaded fries. Fresh Crust Pizza is our pizza and pasta brand. Each concept has its own identity and is assessed for its fit with your restaurant.",
+        "Fry Rebels offers chicken burgers, fried chicken, wings, tenders, fries, and loaded fries. Fresh Crust Pizza is our pizza and pasta brand. Bharat Origins adds a modern Indian kitchen concept to the portfolio. Each brand has its own identity and is assessed for its fit with your restaurant.",
         "You can keep your restaurant name and existing menu. Together, we assess whether one brand or potentially both concepts fit your equipment, team, and available capacity.",
       ],
     ],
@@ -74,12 +74,12 @@ export const pageDetails = {
       "Additional kitchen capacity is only the starting point. Another food brand needs a suitable concept, clear workflows, and a managed digital presence.",
       [
         "Viele Restaurantbetreiber verfügen über Küche, Ausstattung und ein Team, das zusätzliche Bestellungen bewältigen könnte. Gleichzeitig fehlen häufig Zeit oder Ressourcen, um eine weitere Marke zu entwickeln und deren digitalen Auftritt zu betreuen. Hier setzt UCV an.",
-        "Unser erstes Markenportfolio umfasst Fry Rebels mit Crispy Chicken, Burgern, Wings und Loaded Fries sowie Fresh Crust Pizza mit Pizza und Pasta. Der eigene Restaurantname und das bisherige Angebot können neben dem zusätzlichen Lieferkonzept erhalten bleiben.",
+        "Unser Markenportfolio umfasst Fry Rebels mit Crispy Chicken, Burgern, Wings und Loaded Fries, Fresh Crust Pizza mit Pizza und Pasta sowie Bharat Origins als modernes indisches Küchenkonzept. Der eigene Restaurantname und das bisherige Angebot können neben einem passenden Lieferkonzept erhalten bleiben.",
         "Nach unserem ersten Launch mit Fry Rebels Buchholz verfeinern wir unsere Betriebsabläufe und suchen geeignete Restaurantpartner für die weitere Expansion in Deutschland.",
       ],
       [
         "Restaurant owners may have the kitchen space, equipment, and team to handle more orders, but limited time or resources to develop a separate brand and manage its digital presence. UCV addresses this practical challenge.",
-        "Our initial brand portfolio comprises Fry Rebels, focused on crispy chicken, burgers, wings, and loaded fries, and Fresh Crust Pizza, offering pizza and pasta. Partners can retain their restaurant name and existing offering alongside the additional delivery concept.",
+        "Our brand portfolio includes Fry Rebels, focused on crispy chicken, burgers, wings, and loaded fries; Fresh Crust Pizza, offering pizza and pasta; and Bharat Origins, a modern Indian kitchen concept. Partners can retain their restaurant name and existing offering alongside a suitable delivery concept.",
         "Following our first launch with Fry Rebels Buchholz, we are refining our operating processes and seeking suitable restaurant partners for further expansion in Germany.",
       ],
     ],
@@ -187,11 +187,11 @@ export const pageDetails = {
       "Eine Food-Marke wird durch ihre Produkte und die Abläufe hinter jeder Bestellung geprägt.",
       "A food brand is shaped by its products and the work behind every order.",
       [
-        "Bei Fry Rebels stehen Chicken Burger, Fried Chicken, Wings, Tenders, Fries und Loaded Fries im Mittelpunkt. Fresh Crust Pizza ergänzt das Portfolio mit Pizza und Pasta.",
+        "Bei Fry Rebels stehen Chicken Burger, Fried Chicken, Wings, Tenders, Fries und Loaded Fries im Mittelpunkt. Fresh Crust Pizza ergänzt das Portfolio mit Pizza und Pasta; Bharat Origins ist unser modernes indisches Küchenkonzept.",
         "Zubereitung, Zusammenstellung und Verpackung werden auf das vereinbarte Menü und die Abläufe der Partnerküche abgestimmt. Die konkrete Produktauswahl legen wir vor dem Launch gemeinsam fest.",
       ],
       [
-        "Fry Rebels focuses on chicken burgers, fried chicken, wings, tenders, fries, and loaded fries. Fresh Crust Pizza adds pizza and pasta to the portfolio.",
+        "Fry Rebels focuses on chicken burgers, fried chicken, wings, tenders, fries, and loaded fries. Fresh Crust Pizza adds pizza and pasta, while Bharat Origins is our modern Indian kitchen concept.",
         "Preparation, assembly, and packaging are adapted to the agreed menu and the partner kitchen’s workflows. The specific product selection is agreed together before launch.",
       ],
     ],
@@ -285,6 +285,41 @@ export const pageDetails = {
         "We then agree on the launch menu and prepare your team to follow the agreed recipes and packaging standards. Any additional equipment requirements are discussed before signing.",
         "UCV supports menu development, agreed pricing, platform onboarding and ongoing management, product presentation, and marketing coordination. Your restaurant team manages kitchen operations and prepares the orders.",
         "There is no joining fee. Revenue share, cost allocation, delivery, and advertising budgets are agreed before launch. A non-binding enquiry is the first step.",
+      ],
+    ],
+  ],
+
+  "bharat-origins": [
+    [
+      "DIE MARKE",
+      "THE BRAND",
+      "MODERNE INDISCHE KÜCHE. FÜR BESTEHENDE RESTAURANTS.",
+      "MODERN INDIAN CUISINE. FOR EXISTING RESTAURANTS.",
+      "Bharat Origins ist ein modernes indisches Küchenkonzept für geeignete Restaurantpartner.",
+      "Bharat Origins is a modern Indian kitchen concept for suitable restaurant partners.",
+      [
+        "Die Marke soll ein zusätzliches Lieferangebot in eine bestehende Restaurantküche integrieren. Dein Restaurantname und dein bisheriges Angebot können erhalten bleiben.",
+        "Die konkrete Produktauswahl, Gerichte, Rezepturen und Preise werden gemeinsam mit dem Restaurantpartner festgelegt. Bis zur Bestätigung des Launch-Menüs zeigen wir hier keine einzelnen Gerichte als festes Angebot.",
+      ],
+      [
+        "The brand is designed to add a delivery offering to an existing restaurant kitchen. You can retain your restaurant name and current offering.",
+        "The product selection, dishes, recipes, and pricing will be agreed with the restaurant partner. Until the launch menu is confirmed, no individual dishes are presented here as a fixed offer.",
+      ],
+    ],
+    [
+      "GEMEINSAM VORBEREITEN",
+      "PREPARING TOGETHER",
+      "MENÜ, ABLÄUFE UND UNTERSTÜTZUNG ABSTIMMEN.",
+      "AGREE THE MENU, WORKFLOWS, AND SUPPORT.",
+      "Vor dem Start prüfen wir gemeinsam, ob Konzept und Küchenkapazität zusammenpassen.",
+      "Before launch, we assess together whether the concept and kitchen capacity are a suitable fit.",
+      [
+        "Standort, Ausstattung, Team und Liefermöglichkeiten bilden die Grundlage. UCV begleitet die vereinbarte Marken- und Menüentwicklung, Plattformaufgaben, Marketingkoordination und Schulung.",
+        "Dein Restaurantteam bereitet die Speisen zu und organisiert den täglichen Küchenbetrieb. Konkrete Gerichte, Produktbilder und Verpackungsdetails ergänzen wir, sobald sie vom Unternehmen freigegeben sind.",
+      ],
+      [
+        "Location, equipment, team, and delivery arrangements are the starting point. UCV supports the agreed brand and menu development, platform tasks, marketing coordination, and training.",
+        "Your restaurant team prepares the food and manages day-to-day kitchen operations. Specific dishes, product photographs, and packaging details will be added once approved by the business.",
       ],
     ],
   ],

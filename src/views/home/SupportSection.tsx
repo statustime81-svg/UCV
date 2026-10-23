@@ -26,12 +26,12 @@ const icons = [
 ];
 
 const supportImages = [
-  "/assets/placeholders/our-support/brand-menu.png",
-  "/assets/placeholders/our-support/delivery-platforms.png",
-  "/assets/placeholders/our-support/team-training.png",
-  "/assets/placeholders/our-support/marketing.png",
-  "/assets/placeholders/our-support/packaging.png",
-  "/assets/placeholders/our-support/personal-support.png",
+  "/assets/placeholders/our-support/brand-menu.webp",
+  "/assets/placeholders/our-support/delivery-platforms.webp",
+  "/assets/placeholders/our-support/team-training.webp",
+  "/assets/placeholders/our-support/marketing.webp",
+  "/assets/placeholders/our-support/packaging.webp",
+  "/assets/placeholders/our-support/personal-support.webp",
 ];
 
 export default function SupportSection({ l }: { l: Lang }) {

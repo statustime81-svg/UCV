@@ -32,8 +32,8 @@ export default function How({ l }: { l: Lang }) {
         <p>
           {pick(
             l,
-            "Ergänze dein bestehendes Restaurant um ein zusätzliches Lieferangebot mit Fry Rebels oder Fresh Crust Pizza. Gemeinsam prüfen wir Standort, Ausstattung, verfügbare Mitarbeitende und Liefermöglichkeiten, um das passende Konzept für deinen Betrieb zu finden.",
-            "Add an additional delivery offering to your existing restaurant with Fry Rebels or Fresh Crust Pizza. Together, we assess your location, equipment, staffing, and delivery arrangements to find a suitable concept for your business."
+            "Ergänze dein bestehendes Restaurant um ein zusätzliches Lieferangebot mit Fry Rebels, Fresh Crust Pizza oder Bharat Origins. Gemeinsam prüfen wir Standort, Ausstattung, verfügbare Mitarbeitende und Liefermöglichkeiten, um das passende Konzept für deinen Betrieb zu finden.",
+            "Add an additional delivery offering to your existing restaurant with Fry Rebels, Fresh Crust Pizza, or Bharat Origins. Together, we assess your location, equipment, staffing, and delivery arrangements to find a suitable concept for your business."
           )}
         </p>
 
