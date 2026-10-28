@@ -230,3 +230,21 @@ main section{position:relative}.food-accent{position:absolute;bottom:16px;right:
     padding: 8px;
   }
 }
+
+/* Center brand logo artwork inside the white circular card badges */
+.brand-panel .brand-logo-badge {
+  display: grid !important;
+  place-items: center !important;
+}
+
+.brand-panel .brand-logo-badge img.brand-logo-image {
+  width: 78% !important;
+  height: 78% !important;
+  max-width: 78% !important;
+  max-height: 78% !important;
+  margin: 0 !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  transform: none !important;
+}
+
