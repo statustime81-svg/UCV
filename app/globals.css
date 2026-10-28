@@ -248,3 +248,40 @@ main section{position:relative}.food-accent{position:absolute;bottom:16px;right:
   transform: none !important;
 }
 
+
+/* Center story-card brand logos over the image */
+.detail-story-visual > .detail-story-brand-stamp {
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  right: auto !important;
+  bottom: auto !important;
+  transform: translate(-50%, -50%) !important;
+  display: grid !important;
+  place-items: center !important;
+  width: 116px !important;
+  height: 116px !important;
+  padding: 15px !important;
+  border-radius: 50% !important;
+  background: #fff !important;
+  z-index: 3 !important;
+}
+
+.detail-story-visual .detail-story-brand-logo {
+  display: block !important;
+  width: 78% !important;
+  height: 78% !important;
+  margin: 0 !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  transform: none !important;
+}
+
+@media (max-width: 580px) {
+  .detail-story-visual > .detail-story-brand-stamp {
+    width: 88px !important;
+    height: 88px !important;
+    padding: 11px !important;
+  }
+}
+
