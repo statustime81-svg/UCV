@@ -34,6 +34,11 @@ export const assets = {
   brandIdea: "/assets/placeholders/brand-idea-concept.webp",
   brandComparison: "/assets/placeholders/brand-comparison-concept.webp",
   brandLaunch: "/assets/placeholders/launch-service-concept.webp",
+  // Distinct brand-specific visuals for the three Our Brands story cards.
+  brandDetailFry: "/assets/placeholders/brand-detail-fry-rebels.webp",
+  brandDetailPizza: "/assets/placeholders/brand-detail-fresh-crust.webp",
+  brandDetailBharat: "/assets/placeholders/brand-detail-bharat-origins.webp",
+  partnerKitchen: "/assets/placeholders/partner-kitchen-concept.webp",
 
   // How It Works detail sections
   howStep1: "/assets/placeholders/how-it-works-01-concept.webp",
@@ -54,5 +59,6 @@ export const assets = {
 
   // Concept image until Bharat Origins product photos are provided.
   bharatLogo: "/assets/bharat-origins-logo-transparent.png",
-  bharatFood: "/assets/bharat-origins-food-concept.webp",
+  // Use the generated Bharat-specific photo wherever the Bharat Origins logo appears.
+  bharatFood: "/assets/placeholders/brand-detail-bharat-origins.webp",
 };

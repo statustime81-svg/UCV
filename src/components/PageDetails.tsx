@@ -6,32 +6,66 @@ import { Button } from "./Ui";
 type DetailPage = keyof typeof pageDetails;
 
 const pageImages: Partial<Record<DetailPage, string[]>> = {
-  brands: [assets.brandIdea, assets.brandComparison, assets.brandLaunch],
-  "how-it-works": [assets.howStep1, assets.howStep2, assets.howStep3],
-  about: [assets.about01, assets.about02, assets.about03],
-  gallery: [assets.galleryDetail01, assets.galleryDetail02],
-  "fry-rebels": [assets.fryRebelsDetail01, assets.fryRebelsDetail02],
-  "fresh-crust-pizza": [assets.freshCrustDetail01, assets.freshCrustDetail02],
-  "bharat-origins": [assets.bharatFood, assets.bharatFood],
+  brands: [
+    assets.brandDetailFry,
+    assets.brandDetailPizza,
+    assets.brandDetailBharat,
+  ],
+  "how-it-works": [
+    assets.howStep1,
+    assets.howStep2,
+    assets.howStep3,
+  ],
+  about: [
+    assets.about01,
+    assets.about02,
+    assets.about03,
+  ],
+  gallery: [
+    assets.galleryDetail01,
+    assets.galleryDetail02,
+  ],
+  "fry-rebels": [
+    assets.fryRebelsDetail01,
+    assets.fryRebelsDetail02,
+  ],
+  "fresh-crust-pizza": [
+    assets.freshCrustDetail01,
+    assets.freshCrustDetail02,
+  ],
+  "bharat-origins": [
+    assets.bharatFood,
+    assets.bharatFood,
+  ],
 };
 
-const brandLogos = [assets.fryLogo, assets.pizzaLogo, assets.bharatLogo];
+const brandLogos = [
+  assets.fryLogo,
+  assets.pizzaLogo,
+  assets.bharatLogo,
+];
 
 function getDetailImage(page: DetailPage, index: number): string {
-  const image = pageImages[page]?.[index];
-
-  if (image) {
-    return image;
-  }
-
-  // Generic stories must never fall back to a different brand's food image.
-  return assets.kitchen;
+  return pageImages[page]?.[index] || assets.kitchen;
 }
 
 function getStampLogo(page: DetailPage, index: number): string {
   if (page === "fry-rebels") return assets.fryLogo;
   if (page === "fresh-crust-pizza") return assets.pizzaLogo;
   if (page === "bharat-origins") return assets.bharatLogo;
+
+  if (
+    page === "brands" ||
+    page === "about" ||
+    page === "how-it-works"
+  ) {
+    return brandLogos[index % brandLogos.length];
+  }
+
+  if (page === "gallery") {
+    return index === 0 ? assets.fryLogo : assets.pizzaLogo;
+  }
+
   return brandLogos[index % brandLogos.length];
 }
 
@@ -51,6 +85,13 @@ export default function PageDetails({
         const stampLogo = getStampLogo(page, index);
         const title = section[l === "de" ? 0 : 1];
 
+        // Hide logos on How It Works and About.
+        // On Gallery, hide only the second card's logo (the car card).
+        const showLogo =
+          page !== "how-it-works" &&
+          page !== "about" &&
+          !(page === "gallery" && index === 1);
+
         return (
           <section
             className={`section detail-story ${
@@ -66,13 +107,15 @@ export default function PageDetails({
                 loading="lazy"
               />
 
-              <span className="detail-story-brand-stamp" aria-hidden="true">
-                <img
-                  className="detail-story-brand-logo"
-                  src={stampLogo}
-                  alt=""
-                />
-              </span>
+              {showLogo && (
+                <span className="detail-story-brand-stamp" aria-hidden="true">
+                  <img
+                    className="detail-story-brand-logo"
+                    src={stampLogo}
+                    alt=""
+                  />
+                </span>
+              )}
 
               <span className="detail-story-caption">
                 UCV / {String(index + 1).padStart(2, "0")} ·{" "}
@@ -83,7 +126,9 @@ export default function PageDetails({
             <div className="detail-story-copy" data-reveal>
               <span className="eyebrow">{title}</span>
               <h2>{section[l === "de" ? 2 : 3]}</h2>
-              <p className="detail-lead">{section[l === "de" ? 4 : 5]}</p>
+              <p className="detail-lead">
+                {section[l === "de" ? 4 : 5]}
+              </p>
 
               {section[l === "de" ? 6 : 7].map((text) => (
                 <p key={text}>{text}</p>
